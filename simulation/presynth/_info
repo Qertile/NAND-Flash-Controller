@@ -1,0 +1,60 @@
+m255
+K4
+z2
+!s11f vlog 2021.3 2021.07, Jul 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/simulation
+vcontroller_tb
+Z1 !s110 1686711562
+!i10b 1
+!s100 ]VOj1<6m9QWhLk_3e0;>n3
+Ijh9[D`0HWg22ORCIDk0:g3
+R0
+w1686665056
+8C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus/controller_tb.v
+FC:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus/controller_tb.v
+!i122 41
+L0 30 58
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 OW;L;2021.3;73
+r1
+!s85 0
+31
+Z4 !s108 1686711562.000000
+!s107 C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus/controller_tb.v|
+!s90 -reportprogress|300|+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl|+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus|-vlog01compat|-work|presynth|C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus/controller_tb.v|
+!s101 -O0
+!i113 1
+Z5 o-vlog01compat -work presynth -O0
+!s92 +incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl +incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus -vlog01compat -work presynth -O0
+Z6 tCvgOpt 0
+vMT29F8G08ABACAWP
+R1
+!i10b 1
+!s100 J0?L`Xh@m82TW_UM5]2eG1
+IJHY>lm3_N48<;QWXAI5?k0
+R0
+w1686711524
+8C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl/nand.v
+FC:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl/nand.v
+!i122 40
+L0 5 108
+R2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl/inc.v|C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl/nand.v|
+!s90 -reportprogress|300|+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl|-vlog01compat|-work|presynth|C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl/nand.v|
+!s101 -O0
+!i113 1
+R5
+!s92 +incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl -vlog01compat -work presynth -O0
+R6
+n@m@t29@f8@g08@a@b@a@c@a@w@p

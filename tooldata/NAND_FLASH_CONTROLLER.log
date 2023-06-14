@@ -1,0 +1,16 @@
+Project Name: NAND_FLASH_CONTROLLER
+Location: C:\Users\Nathan\Desktop\UADL\Internship\Acromax\counter\Libero\NAND_FLASH_CONTROLLER
+Description: 
+Preferred HDL Type: Verilog
+
+#-----------------------------------------------------
+                  Device Details
+#-----------------------------------------------------
+
+Part Number    : M2S010-FG484I
+Family         : SmartFusion2
+Die            : M2S010
+Package        : 484 FBGA
+Speed          : STD
+Core Voltage   : 1.2
+Range          : IND
