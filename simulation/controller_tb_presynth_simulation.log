@@ -288,3 +288,163 @@ do run.do
 # Start time: 10:59:23 on Jun 14,2023
 # Loading presynth.controller_tb
 # Loading presynth.MT29F8G08ABACAWP
+do run.do
+# INFO: Simulation library presynth already exists
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap presynth presynth 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap SmartFusion2 C:/Microsemi/Libero_SoC_v2022.1/Designer/lib/modelsimpro/precompiled/vlog/SmartFusion2 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
+# Start time: 12:52:44 on Jun 14,2023
+# vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl/nand.v 
+# -- Compiling module MT29F8G08ABACAWP
+# 
+# Top level modules:
+# 	MT29F8G08ABACAWP
+# End time: 12:52:44 on Jun 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
+# Start time: 12:52:44 on Jun 14,2023
+# vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl" "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus/controller_tb.v 
+# -- Compiling module controller_tb
+# 
+# Top level modules:
+# 	controller_tb
+# End time: 12:52:45 on Jun 14,2023, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# End time: 12:52:45 on Jun 14,2023, Elapsed time: 1:53:22
+# Errors: 0, Warnings: 0
+# vsim -L SmartFusion2 -L presynth -t 1fs presynth.controller_tb 
+# Start time: 12:52:45 on Jun 14,2023
+# Loading presynth.controller_tb
+# Loading presynth.MT29F8G08ABACAWP
+do run.do
+# INFO: Simulation library presynth already exists
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap presynth presynth 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap SmartFusion2 C:/Microsemi/Libero_SoC_v2022.1/Designer/lib/modelsimpro/precompiled/vlog/SmartFusion2 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
+# Start time: 13:17:16 on Jun 14,2023
+# vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl/nand.v 
+# -- Compiling module MT29F8G08ABACAWP
+# 
+# Top level modules:
+# 	MT29F8G08ABACAWP
+# End time: 13:17:16 on Jun 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
+# Start time: 13:17:16 on Jun 14,2023
+# vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl" "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus/controller_tb.v 
+# -- Compiling module controller_tb
+# 
+# Top level modules:
+# 	controller_tb
+# End time: 13:17:16 on Jun 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:17:17 on Jun 14,2023, Elapsed time: 0:24:32
+# Errors: 0, Warnings: 0
+# vsim -L SmartFusion2 -L presynth -t 1fs presynth.controller_tb 
+# Start time: 13:17:17 on Jun 14,2023
+# Loading presynth.controller_tb
+# Loading presynth.MT29F8G08ABACAWP
+do run.do
+# INFO: Simulation library presynth already exists
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap presynth presynth 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap SmartFusion2 C:/Microsemi/Libero_SoC_v2022.1/Designer/lib/modelsimpro/precompiled/vlog/SmartFusion2 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
+# Start time: 13:32:11 on Jun 14,2023
+# vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl/nand.v 
+# -- Compiling module MT29F8G08ABACAWP
+# 
+# Top level modules:
+# 	MT29F8G08ABACAWP
+# End time: 13:32:11 on Jun 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
+# Start time: 13:32:11 on Jun 14,2023
+# vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl" "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus/controller_tb.v 
+# -- Compiling module controller_tb
+# 
+# Top level modules:
+# 	controller_tb
+# End time: 13:32:11 on Jun 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:32:11 on Jun 14,2023, Elapsed time: 0:14:54
+# Errors: 0, Warnings: 0
+# vsim -L SmartFusion2 -L presynth -t 1fs presynth.controller_tb 
+# Start time: 13:32:11 on Jun 14,2023
+# Loading presynth.controller_tb
+# Loading presynth.MT29F8G08ABACAWP
+do run.do
+# INFO: Simulation library presynth already exists
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap presynth presynth 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap SmartFusion2 C:/Microsemi/Libero_SoC_v2022.1/Designer/lib/modelsimpro/precompiled/vlog/SmartFusion2 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
+# Start time: 13:34:33 on Jun 14,2023
+# vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl/nand.v 
+# -- Compiling module MT29F8G08ABACAWP
+# 
+# Top level modules:
+# 	MT29F8G08ABACAWP
+# End time: 13:34:33 on Jun 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
+# Start time: 13:34:33 on Jun 14,2023
+# vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl" "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus/controller_tb.v 
+# -- Compiling module controller_tb
+# 
+# Top level modules:
+# 	controller_tb
+# End time: 13:34:33 on Jun 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:34:34 on Jun 14,2023, Elapsed time: 0:02:23
+# Errors: 0, Warnings: 0
+# vsim -L SmartFusion2 -L presynth -t 1fs presynth.controller_tb 
+# Start time: 13:34:34 on Jun 14,2023
+# Loading presynth.controller_tb
+# Loading presynth.MT29F8G08ABACAWP
+do run.do
+# INFO: Simulation library presynth already exists
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap presynth presynth 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap SmartFusion2 C:/Microsemi/Libero_SoC_v2022.1/Designer/lib/modelsimpro/precompiled/vlog/SmartFusion2 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
+# Start time: 13:50:06 on Jun 14,2023
+# vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl/nand.v 
+# -- Compiling module MT29F8G08ABACAWP
+# 
+# Top level modules:
+# 	MT29F8G08ABACAWP
+# End time: 13:50:06 on Jun 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
+# Start time: 13:50:06 on Jun 14,2023
+# vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl" "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus/controller_tb.v 
+# -- Compiling module controller_tb
+# 
+# Top level modules:
+# 	controller_tb
+# End time: 13:50:06 on Jun 14,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 13:50:07 on Jun 14,2023, Elapsed time: 0:15:33
+# Errors: 0, Warnings: 0
+# vsim -L SmartFusion2 -L presynth -t 1fs presynth.controller_tb 
+# Start time: 13:50:07 on Jun 14,2023
+# Loading presynth.controller_tb
+# Loading presynth.MT29F8G08ABACAWP

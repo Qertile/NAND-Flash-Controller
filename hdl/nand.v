@@ -5,7 +5,7 @@
 module MT29F8G08ABACAWP (
     nCE, CLE, ALE, nWE, nRE, nWP,
     IOH, IOT,
-    RB, nRST, MODE
+    RB, nRST, TYPE
 );
 /*
     nCE:  chip(die, LUN) enable, low actived
@@ -18,44 +18,32 @@ module MT29F8G08ABACAWP (
     IOT:  [7:0] data I/O to Target
     RB:   ready/busy
     nRST: reset trigger, low actived
-    MODE: [7:0] for host to select incoming I/O is 0: command, 1: address, 2: data
+    TYPE: [7:0] for host to select incoming I/O is 0: command, 1: address, 2: data
 
 */
 
-input  RB, nRST, MODE;
+input  RB, nRST, TYPE;
 output nCE, CLE, ALE, nWE, nRE, nWP;
 inout  IOH, IOT;
 
-wire [2:0] MODE;
+wire [1:0] TYPE;
 wire [7:0] IOH, IOT; // IO to host and IO to target
 reg nCE, CLE, ALE, nWE, nRE, nWP;
 reg [7:0] buff;
 
 always @( negedge nRST) begin
     command_cycle(`CMD_RESET);
-    address_cycle(8'hAA);
-    address_cycle(8'hAB);
-    address_cycle(8'hAC);
-    address_cycle(8'hAD);
-    address_cycle(8'hAE);
-    address_cycle(8'hAF);
-    data_cycle(8'h00);
-    data_cycle(8'h01);
-    data_cycle(8'h02);
-    data_cycle(8'h03);
-    data_cycle(8'h04);
-    data_cycle(8'h05);
-    data_cycle(8'h06);
-    data_cycle(8'h07);
-    data_cycle(8'h08);
-    data_cycle(8'h09);
-    data_cycle(8'h0A);
-    data_cycle(8'h0B);
-    data_cycle(8'h0C);
-    data_cycle(8'h0D);
-    data_cycle(8'h0E);
-    data_cycle(8'h0F);
 end
+
+always @(IOH)begin
+    case (TYPE)
+        2'b00: command_cycle(IOH);
+        2'b01: address_cycle(IOH);
+        2'b10: data_cycle(IOH);
+        default: command_cycle(IOH);
+    endcase
+end
+
 assign IOT = buff;
 
 task command_cycle;

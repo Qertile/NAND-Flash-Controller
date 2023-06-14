@@ -10,22 +10,22 @@ z2
 cModel Technology
 Z0 dC:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/simulation
 vcontroller_tb
-Z1 !s110 1686711562
+Z1 !s110 1686721806
 !i10b 1
-!s100 ]VOj1<6m9QWhLk_3e0;>n3
-Ijh9[D`0HWg22ORCIDk0:g3
+!s100 NVT2ET3n_Bd<3m;eS3dNa0
+IXNHMX4dA2z7CGQ7GRJ1?i3
 R0
-w1686665056
+w1686721785
 8C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus/controller_tb.v
 FC:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus/controller_tb.v
-!i122 41
-L0 30 58
+!i122 51
+L0 30 90
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 Z3 OW;L;2021.3;73
 r1
 !s85 0
 31
-Z4 !s108 1686711562.000000
+Z4 !s108 1686721806.000000
 !s107 C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus/controller_tb.v|
 !s90 -reportprogress|300|+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl|+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus|-vlog01compat|-work|presynth|C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus/controller_tb.v|
 !s101 -O0
@@ -36,14 +36,14 @@ Z6 tCvgOpt 0
 vMT29F8G08ABACAWP
 R1
 !i10b 1
-!s100 J0?L`Xh@m82TW_UM5]2eG1
-IJHY>lm3_N48<;QWXAI5?k0
+!s100 _I]QG1NgiI<47i0033De21
+IA8H3NWb4JQ7dT@N8YIe><2
 R0
-w1686711524
+w1686721061
 8C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl/nand.v
 FC:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl/nand.v
-!i122 40
-L0 5 108
+!i122 50
+L0 5 99
 R2
 R3
 r1
