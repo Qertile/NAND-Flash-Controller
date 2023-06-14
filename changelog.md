@@ -2,11 +2,8 @@
 The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 
 -----------------------------------
-## Unreleased v0.0.2 (2023.06.##)
+## Unreleased v0.0.3 (2023.06.##)
 ### New
-1. create task `address_cycle`
-2. create task `data_cycle`
-3. create input `MODE`
 ### Changed
 ### Removed
 ### Deprecated
@@ -15,6 +12,13 @@ The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 ### Notes
 ### Reference
 
+-----------------------------------
+## Unreleased v0.0.2 (2023.06.13)
+### New
+1. create task `address_cycle`
+2. create task `data_cycle`
+3. create input `MODE`
+4. 
 -----------------------------------
 ## NFC v0.0.1 (2023.06.13)
 ### New
