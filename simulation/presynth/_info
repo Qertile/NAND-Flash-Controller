@@ -8,41 +8,41 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/simulation
+dC:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/simulation
 vcontroller_tb
-Z1 !s110 1686721806
+Z0 !s110 1688540744
 !i10b 1
 !s100 NVT2ET3n_Bd<3m;eS3dNa0
-IXNHMX4dA2z7CGQ7GRJ1?i3
-R0
+IzVQM1_;hO84N5RD`NBV:_1
+Z1 dC:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/simulation
 w1686721785
-8C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus/controller_tb.v
-FC:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus/controller_tb.v
-!i122 51
+8C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/controller_tb.v
+FC:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/controller_tb.v
+!i122 56
 L0 30 90
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 Z3 OW;L;2021.3;73
 r1
 !s85 0
 31
-Z4 !s108 1686721806.000000
-!s107 C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus/controller_tb.v|
-!s90 -reportprogress|300|+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl|+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus|-vlog01compat|-work|presynth|C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus/controller_tb.v|
+Z4 !s108 1688540744.000000
+!s107 C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/controller_tb.v|
+!s90 -reportprogress|300|+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl|+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus|-vlog01compat|-work|presynth|C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/controller_tb.v|
 !s101 -O0
 !i113 1
 Z5 o-vlog01compat -work presynth -O0
-!s92 +incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl +incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/stimulus -vlog01compat -work presynth -O0
+!s92 +incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl +incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus -vlog01compat -work presynth -O0
 Z6 tCvgOpt 0
 vMT29F8G08ABACAWP
-R1
+R0
 !i10b 1
 !s100 _I]QG1NgiI<47i0033De21
-IA8H3NWb4JQ7dT@N8YIe><2
-R0
+IKf2I`T<g6`GLQR[2dhUPO2
+R1
 w1686721061
-8C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl/nand.v
-FC:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl/nand.v
-!i122 50
+8C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/nand.v
+FC:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/nand.v
+!i122 55
 L0 5 99
 R2
 R3
@@ -50,11 +50,11 @@ r1
 !s85 0
 31
 R4
-!s107 C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl/inc.v|C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl/nand.v|
-!s90 -reportprogress|300|+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl|-vlog01compat|-work|presynth|C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl/nand.v|
+!s107 C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/inc.v|C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/nand.v|
+!s90 -reportprogress|300|+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl|-vlog01compat|-work|presynth|C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/nand.v|
 !s101 -O0
 !i113 1
 R5
-!s92 +incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/hdl -vlog01compat -work presynth -O0
+!s92 +incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl -vlog01compat -work presynth -O0
 R6
 n@m@t29@f8@g08@a@b@a@c@a@w@p

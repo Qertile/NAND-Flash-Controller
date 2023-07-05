@@ -1,5 +1,5 @@
 quietly set ACTELLIBNAME SmartFusion2
-quietly set PROJECT_DIR "C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller"
+quietly set PROJECT_DIR "C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project"
 
 if {[file exists presynth/_info]} {
    echo "INFO: Simulation library presynth already exists"

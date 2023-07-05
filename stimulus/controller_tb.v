@@ -34,7 +34,7 @@ parameter SYSCLK_PERIOD = 1;// 1000MHZ
 /* --- external signals --- */
 reg SYSCLK;
 reg NSYSRESET;
-reg [1:0] type;
+reg [1:0] mode;
 
 wire [7:0] IO_Target, IO_Host;
 wire nCE, CLE, ALE, nWE, nRE, nWP;
@@ -67,7 +67,7 @@ end
 initial begin
     #(SYSCLK_PERIOD * 10 )
     
-    type = 2'b00;
+    mode = 2'b00;
     buff = 8'hFF;
     count = 8'b0;
     
@@ -81,7 +81,7 @@ always @(posedge SYSCLK) begin
         buff = buff+1;
     end
     if (count % 50 == 0) begin
-        type = type+1;
+        mode = mode+1;
     end
 end
 
@@ -108,7 +108,7 @@ MT29F8G08ABACAWP MT29F8G08ABACAWP_0 (
     .nWE(nWE),
     .nRE(nRE),
     .nWP(nWP),
-    .TYPE(type),
+    .mode(mode),
 
     // Inouts
     .IOH( IO_Host ),

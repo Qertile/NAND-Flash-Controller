@@ -32,7 +32,7 @@ KEY VendorTechnology_VCCI_1.8_VOLTR "COM"
 KEY VendorTechnology_VCCI_2.5_VOLTR "COM"
 KEY VendorTechnology_VCCI_3.3_VOLTR "COM"
 KEY VendorTechnology_VOLTR "IND"
-KEY ProjectLocation "C:\Users\Nathan\Desktop\UADL\Internship\Acromax\NAND-Flash-Controller"
+KEY ProjectLocation "C:\Users\Nathan\Desktop\UADL\Internship\Acromax\NAND-Flash-Controller\Project"
 KEY ProjectDescription ""
 KEY UseRootLocationForLinkedFiles "FALSE"
 KEY RootLocationENVForLinkedFiles ""
@@ -64,17 +64,17 @@ SIZE="2043"
 ENDFILE
 VALUE "<project>\simulation\controller_tb_presynth_simulation.log,log"
 STATE="utd"
-TIME="1686721806"
-SIZE="25744"
+TIME="1687154397"
+SIZE="2792"
 ENDFILE
 VALUE "<project>\simulation\run.do,do"
 STATE="utd"
-TIME="1686664296"
+TIME="1687153653"
 SIZE="771"
 ENDFILE
 VALUE "<project>\simulation\subsystem.bfm,sim"
 STATE="utd"
-TIME="1686664296"
+TIME="1687153653"
 SIZE="233"
 ENDFILE
 VALUE "<project>\stimulus\controller_tb.v,tb_hdl"
@@ -86,8 +86,29 @@ ENDLIST
 LIST UsedFile
 ENDLIST
 LIST NewModulesInfo
+LIST "MT29F8G08ABACAWP::work"
+FILE "<project>\hdl\nand.v,hdl"
+LIST AssociatedStimulus
+VALUE "<project>\stimulus\controller_tb.v,tb_hdl"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
+ENDLIST
 ENDLIST
 LIST AssociatedStimulus
+LIST MT29F8G08ABACAWP
+VALUE "<project>\stimulus\controller_tb.v,tb_hdl"
+ENDLIST
 ENDLIST
 LIST Other_Association
 ENDLIST
@@ -168,7 +189,7 @@ NAME="ModelSim ME Pro"
 FUNCTION="Simulation"
 TOOL="ModelSim Pro Edition"
 LOCATION="C:\Microsemi\Libero_SoC_v2022.1\ModelSimPro\win32acoem\modelsim.exe"
-PARAM=" -l controller_tb_presynth_simulation.log "
+PARAM=""
 BATCH=0
 LICENSE=""
 IS32BIT="1"
@@ -184,6 +205,18 @@ IS32BIT="1"
 EndProfile
 ENDLIST
 LIST ProjectState5.1
+LIST "MT29F8G08ABACAWP::work"
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
 ENDLIST
 LIST ExcludePackageForSimulation
 ENDLIST
@@ -197,10 +230,8 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-HDL;hdl\inc.v;0
-HDL;hdl\nand.v;0
-HDL;stimulus\controller_tb.v;0
-ACTIVEVIEW;hdl\nand.v
+StartPage;StartPage;0
+ACTIVEVIEW;StartPage
 ENDLIST
 LIST ModuleSubBlockList
 LIST "MT29F8G08ABACAWP::work","hdl\nand.v","FALSE","FALSE"
@@ -210,6 +241,9 @@ SUBBLOCK "MT29F8G08ABACAWP::work","hdl\nand.v","FALSE","FALSE"
 ENDLIST
 ENDLIST
 LIST ActiveTestBenchList
+LIST "MT29F8G08ABACAWP::work"
+ACTIVETESTBENCH "controller_tb::work","stimulus\controller_tb.v","FALSE"
+ENDLIST
 ENDLIST
 LIST IOTabList
 ENDLIST
