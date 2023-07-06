@@ -1,0 +1,36 @@
+Microsemi Corporation - Microsemi Libero Software Release v2022.1 (Version 2022.1.0.10)
+
+Date      :  Thu Jul  6 10:49:56 2023
+Project   :  C:\Users\Nathan\Desktop\UADL\Internship\Acromax\NAND-Flash-Controller\Project
+Component :  CoreUARTapb_C0
+Family    :  SmartFusion2
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/CoreUARTapb_C0/CoreUARTapb_C0_0/rtl/vlog/core_obfuscated/Clock_gen.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/CoreUARTapb_C0/CoreUARTapb_C0_0/rtl/vlog/core_obfuscated/Rx_async.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/CoreUARTapb_C0/CoreUARTapb_C0_0/rtl/vlog/core_obfuscated/Tx_async.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/CoreUARTapb_C0/CoreUARTapb_C0_0/rtl/vlog/core_obfuscated/CoreUART.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/CoreUARTapb_C0/CoreUARTapb_C0_0/rtl/vlog/core_obfuscated/CoreUARTapb.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/CoreUARTapb_C0/CoreUARTapb_C0_0/rtl/vlog/core_obfuscated/fifo_256x8_g4.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/CoreUARTapb_C0/CoreUARTapb_C0.v
+
+Stimulus files for all Simulation tools:
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/CoreUARTapb_C0/CoreUARTapb_C0_0/mti/scripts/bfmtovec_compile.do
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/CoreUARTapb_C0/CoreUARTapb_C0_0/mti/scripts/coreuart_usertb_apb_master.bfm
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/CoreUARTapb_C0/CoreUARTapb_C0_0/mti/scripts/coreuart_usertb_include.bfm
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/CoreUARTapb_C0/CoreUARTapb_C0_0/mti/scripts/wave_vlog_amba.do
+
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/CoreUARTapb_C0/CoreUARTapb_C0_0/rtl/vlog/amba_bfm/bfm_ahbl.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/CoreUARTapb_C0/CoreUARTapb_C0_0/rtl/vlog/amba_bfm/bfm_ahblapb.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/CoreUARTapb_C0/CoreUARTapb_C0_0/rtl/vlog/amba_bfm/bfm_ahbslave.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/CoreUARTapb_C0/CoreUARTapb_C0_0/rtl/vlog/amba_bfm/bfm_ahbslaveext.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/CoreUARTapb_C0/CoreUARTapb_C0_0/rtl/vlog/amba_bfm/bfm_ahbtoapb.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/CoreUARTapb_C0/CoreUARTapb_C0_0/rtl/vlog/amba_bfm/bfm_apb.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/CoreUARTapb_C0/CoreUARTapb_C0_0/rtl/vlog/amba_bfm/bfm_apbslave.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/CoreUARTapb_C0/CoreUARTapb_C0_0/rtl/vlog/amba_bfm/bfm_apbslaveext.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/CoreUARTapb_C0/CoreUARTapb_C0_0/rtl/vlog/amba_bfm/bfm_apbtoapb.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/CoreUARTapb_C0/CoreUARTapb_C0_0/rtl/vlog/amba_bfm/bfm_main.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/CoreUARTapb_C0/CoreUARTapb_C0_0/coreparameters.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/CoreUARTapb_C0/CoreUARTapb_C0_0/rtl/vlog/test/user/testbench.v
+

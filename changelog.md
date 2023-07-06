@@ -2,7 +2,7 @@
 The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 
 -----------------------------------
-## Unreleased v0.0.4 (2023.07.##)
+## Unreleased v0.1.1 (2023.07.##)
 ### New
 ### Changed
 ### Removed
@@ -11,6 +11,13 @@ The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 ### Known Issues
 ### Notes
 ### Reference
+
+-----------------------------------
+## Unreleased v0.1.0 (2023.07.06)
+### New
+1. using APB bus to connect controller and SF2
+2. create new instance NAND_controller_0
+   
 
 -----------------------------------
 ## NFC v0.0.3 (2023.07.05)

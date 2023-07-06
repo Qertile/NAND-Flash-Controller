@@ -1,0 +1,26 @@
+Microsemi Corporation - Microsemi Libero Software Release v2022.1 (Version 2022.1.0.10)
+
+Date      :  Thu Jul  6 10:22:06 2023
+Project   :  C:\Users\Nathan\Desktop\UADL\Internship\Acromax\NAND-Flash-Controller\Project
+Component :  SF2_sb_MSS
+Family    :  SmartFusion2
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/SF2_sb_MSS/SF2_sb_MSS.v
+
+HDL source files for Synopsys SynplifyPro Synthesis tool:
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/SF2_sb_MSS/SF2_sb_MSS_syn.v
+
+HDL source files for Mentor Precision Synthesis tool:
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/SF2_sb_MSS/SF2_sb_MSS_pre.v
+
+Stimulus files for all Simulation tools:
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/SF2_sb_MSS/CM3_compile_bfm.tcl
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/SF2_sb_MSS/user.bfm
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/SF2_sb_MSS/test.bfm
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/Actel/SmartFusion2MSS/MSS/1.1.500/peripheral_init.bfm
+
+Firmware files for all Software IDE tools:
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/SF2_sb_MSS/sys_config_mss_clocks.h
+
