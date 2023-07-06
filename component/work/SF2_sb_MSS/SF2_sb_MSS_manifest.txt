@@ -1,6 +1,6 @@
 Microsemi Corporation - Microsemi Libero Software Release v2022.1 (Version 2022.1.0.10)
 
-Date      :  Thu Jul  6 10:22:06 2023
+Date      :  Thu Jul  6 16:59:20 2023
 Project   :  C:\Users\Nathan\Desktop\UADL\Internship\Acromax\NAND-Flash-Controller\Project
 Component :  SF2_sb_MSS
 Family    :  SmartFusion2

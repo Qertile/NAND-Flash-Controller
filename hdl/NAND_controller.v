@@ -19,7 +19,7 @@
 //`timescale <time_units> / <precision>
 
 module NAND_controller(
-    // APB Inputs
+    /* APB Inputs */
     PADDR,
     PCLK,
     PENABLE,
@@ -28,11 +28,11 @@ module NAND_controller(
     PWDATA,
     PWRITE,
     
-    // APB Outputs
+    /* APB Outputs */
     PRDATA,
-    PREADY,
-    PSLVERR,
-    // Controller Outputs
+    PREADY_S0,
+    PSLVERR_S0,
+    /* Controller Outputs  */
     nCE, 
     CLE, 
     ALE, 
@@ -55,8 +55,8 @@ input        PWRITE;
 // Output
 //--------------------------------------------------------------------
 output [7:0] PRDATA;
-output       PREADY;
-output       PSLVERR;
+output       PREADY_S0;
+output       PSLVERR_S0;
 output       nCE; 
 output       CLE; 
 output       ALE; 

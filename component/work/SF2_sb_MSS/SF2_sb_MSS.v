@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////
-// Created by SmartDesign Thu Jul  6 10:22:06 2023
+// Created by SmartDesign Thu Jul  6 16:59:20 2023
 // Version: 2022.1 2022.1.0.10
 //////////////////////////////////////////////////////////////////////
 
@@ -11,11 +11,6 @@ module SF2_sb_MSS(
     FIC_0_APB_M_PRDATA,
     FIC_0_APB_M_PREADY,
     FIC_0_APB_M_PSLVERR,
-    FIC_0_APB_S_PADDR,
-    FIC_0_APB_S_PENABLE,
-    FIC_0_APB_S_PSEL,
-    FIC_0_APB_S_PWDATA,
-    FIC_0_APB_S_PWRITE,
     FIC_2_APB_M_PRDATA,
     FIC_2_APB_M_PREADY,
     FIC_2_APB_M_PSLVERR,
@@ -29,9 +24,6 @@ module SF2_sb_MSS(
     FIC_0_APB_M_PSEL,
     FIC_0_APB_M_PWDATA,
     FIC_0_APB_M_PWRITE,
-    FIC_0_APB_S_PRDATA,
-    FIC_0_APB_S_PREADY,
-    FIC_0_APB_S_PSLVERR,
     FIC_2_APB_M_PADDR,
     FIC_2_APB_M_PCLK,
     FIC_2_APB_M_PENABLE,
@@ -48,11 +40,6 @@ module SF2_sb_MSS(
 input  [31:0] FIC_0_APB_M_PRDATA;
 input         FIC_0_APB_M_PREADY;
 input         FIC_0_APB_M_PSLVERR;
-input  [31:0] FIC_0_APB_S_PADDR;
-input         FIC_0_APB_S_PENABLE;
-input         FIC_0_APB_S_PSEL;
-input  [31:0] FIC_0_APB_S_PWDATA;
-input         FIC_0_APB_S_PWRITE;
 input  [31:0] FIC_2_APB_M_PRDATA;
 input         FIC_2_APB_M_PREADY;
 input         FIC_2_APB_M_PSLVERR;
@@ -68,9 +55,6 @@ output        FIC_0_APB_M_PENABLE;
 output        FIC_0_APB_M_PSEL;
 output [31:0] FIC_0_APB_M_PWDATA;
 output        FIC_0_APB_M_PWRITE;
-output [31:0] FIC_0_APB_S_PRDATA;
-output        FIC_0_APB_S_PREADY;
-output        FIC_0_APB_S_PSLVERR;
 output [15:2] FIC_2_APB_M_PADDR;
 output        FIC_2_APB_M_PCLK;
 output        FIC_2_APB_M_PENABLE;
@@ -90,14 +74,6 @@ wire          FIC_0_APB_MASTER_PSELx;
 wire          FIC_0_APB_M_PSLVERR;
 wire   [31:0] FIC_0_APB_MASTER_PWDATA;
 wire          FIC_0_APB_MASTER_PWRITE;
-wire   [31:0] FIC_0_APB_S_PADDR;
-wire          FIC_0_APB_S_PENABLE;
-wire   [31:0] FIC_0_APB_SLAVE_PRDATA;
-wire          FIC_0_APB_SLAVE_PREADY;
-wire          FIC_0_APB_S_PSEL;
-wire          FIC_0_APB_SLAVE_PSLVERR;
-wire   [31:0] FIC_0_APB_S_PWDATA;
-wire          FIC_0_APB_S_PWRITE;
 wire          FIC_2_APB_M_PCLK_0;
 wire          FIC_2_APB_M_PRESET_N_0;
 wire   [15:2] FIC_2_APB_MASTER_0_PADDR;
@@ -114,8 +90,6 @@ wire   [15:0] MSS_INT_F2M;
 wire          MSS_RESET_N_F2M;
 wire          MSS_RESET_N_M2F_net_0;
 wire          MSS_RESET_N_M2F_net_1;
-wire          FIC_0_APB_SLAVE_PREADY_net_0;
-wire          FIC_0_APB_SLAVE_PSLVERR_net_0;
 wire          FIC_0_APB_MASTER_PSELx_net_0;
 wire          FIC_0_APB_MASTER_PWRITE_net_0;
 wire          FIC_0_APB_MASTER_PENABLE_net_0;
@@ -124,7 +98,6 @@ wire          FIC_2_APB_M_PCLK_0_net_0;
 wire          FIC_2_APB_MASTER_0_PWRITE_net_0;
 wire          FIC_2_APB_MASTER_0_PENABLE_net_0;
 wire          FIC_2_APB_MASTER_0_PSELx_net_0;
-wire   [31:0] FIC_0_APB_SLAVE_PRDATA_net_0;
 wire   [31:0] FIC_0_APB_MASTER_PADDR_net_0;
 wire   [31:0] FIC_0_APB_MASTER_PWDATA_net_0;
 wire   [15:2] FIC_2_APB_MASTER_0_PADDR_net_0;
@@ -140,7 +113,9 @@ wire   [1:0]  DRAM_FIFO_WE_IN_const_net_0;
 wire          VCC_net;
 wire   [1:0]  F2_DMAREADY_const_net_0;
 wire   [1:0]  F_DMAREADY_const_net_0;
+wire   [31:0] F_FM0_ADDR_const_net_0;
 wire   [1:0]  F_FM0_SIZE_const_net_0;
+wire   [31:0] F_FM0_WDATA_const_net_0;
 wire   [1:0]  FAB_LINESTATE_const_net_0;
 wire   [7:0]  FAB_VSTATUS_const_net_0;
 wire   [7:0]  FAB_XDATAIN_const_net_0;
@@ -174,7 +149,9 @@ assign DRAM_FIFO_WE_IN_const_net_0     = 2'h0;
 assign VCC_net                         = 1'b1;
 assign F2_DMAREADY_const_net_0         = 2'h3;
 assign F_DMAREADY_const_net_0          = 2'h3;
+assign F_FM0_ADDR_const_net_0          = 32'h00000000;
 assign F_FM0_SIZE_const_net_0          = 2'h0;
+assign F_FM0_WDATA_const_net_0         = 32'h00000000;
 assign FAB_LINESTATE_const_net_0       = 2'h3;
 assign FAB_VSTATUS_const_net_0         = 8'hFF;
 assign FAB_XDATAIN_const_net_0         = 8'hFF;
@@ -202,10 +179,6 @@ assign MDDR_FABRIC_PWDATA_const_net_0  = 16'hFFFF;
 //--------------------------------------------------------------------
 assign MSS_RESET_N_M2F_net_1            = MSS_RESET_N_M2F_net_0;
 assign MSS_RESET_N_M2F                  = MSS_RESET_N_M2F_net_1;
-assign FIC_0_APB_SLAVE_PREADY_net_0     = FIC_0_APB_SLAVE_PREADY;
-assign FIC_0_APB_S_PREADY               = FIC_0_APB_SLAVE_PREADY_net_0;
-assign FIC_0_APB_SLAVE_PSLVERR_net_0    = FIC_0_APB_SLAVE_PSLVERR;
-assign FIC_0_APB_S_PSLVERR              = FIC_0_APB_SLAVE_PSLVERR_net_0;
 assign FIC_0_APB_MASTER_PSELx_net_0     = FIC_0_APB_MASTER_PSELx;
 assign FIC_0_APB_M_PSEL                 = FIC_0_APB_MASTER_PSELx_net_0;
 assign FIC_0_APB_MASTER_PWRITE_net_0    = FIC_0_APB_MASTER_PWRITE;
@@ -222,8 +195,6 @@ assign FIC_2_APB_MASTER_0_PENABLE_net_0 = FIC_2_APB_MASTER_0_PENABLE;
 assign FIC_2_APB_M_PENABLE              = FIC_2_APB_MASTER_0_PENABLE_net_0;
 assign FIC_2_APB_MASTER_0_PSELx_net_0   = FIC_2_APB_MASTER_0_PSELx;
 assign FIC_2_APB_M_PSEL                 = FIC_2_APB_MASTER_0_PSELx_net_0;
-assign FIC_0_APB_SLAVE_PRDATA_net_0     = FIC_0_APB_SLAVE_PRDATA;
-assign FIC_0_APB_S_PRDATA[31:0]         = FIC_0_APB_SLAVE_PRDATA_net_0;
 assign FIC_0_APB_MASTER_PADDR_net_0     = FIC_0_APB_MASTER_PADDR;
 assign FIC_0_APB_M_PADDR[31:0]          = FIC_0_APB_MASTER_PADDR_net_0;
 assign FIC_0_APB_MASTER_PWDATA_net_0    = FIC_0_APB_MASTER_PWDATA;
@@ -254,15 +225,15 @@ MSS_ADLIB_INST(
         .F2H_INTERRUPT                           ( MSS_INT_F2M ),
         .F2HCALIB                                ( VCC_net ), // tied to 1'b1 from definition
         .F_DMAREADY                              ( F_DMAREADY_const_net_0 ), // tied to 2'h3 from definition
-        .F_FM0_ADDR                              ( FIC_0_APB_S_PADDR ),
-        .F_FM0_ENABLE                            ( FIC_0_APB_S_PENABLE ),
+        .F_FM0_ADDR                              ( F_FM0_ADDR_const_net_0 ), // tied to 32'h00000000 from definition
+        .F_FM0_ENABLE                            ( GND_net ), // tied to 1'b0 from definition
         .F_FM0_MASTLOCK                          ( GND_net ), // tied to 1'b0 from definition
         .F_FM0_READY                             ( VCC_net ), // tied to 1'b1 from definition
-        .F_FM0_SEL                               ( FIC_0_APB_S_PSEL ),
+        .F_FM0_SEL                               ( GND_net ), // tied to 1'b0 from definition
         .F_FM0_SIZE                              ( F_FM0_SIZE_const_net_0 ), // tied to 2'h0 from definition
         .F_FM0_TRANS1                            ( GND_net ), // tied to 1'b0 from definition
-        .F_FM0_WDATA                             ( FIC_0_APB_S_PWDATA ),
-        .F_FM0_WRITE                             ( FIC_0_APB_S_PWRITE ),
+        .F_FM0_WDATA                             ( F_FM0_WDATA_const_net_0 ), // tied to 32'h00000000 from definition
+        .F_FM0_WRITE                             ( GND_net ), // tied to 1'b0 from definition
         .F_HM0_RDATA                             ( FIC_0_APB_M_PRDATA ),
         .F_HM0_READY                             ( FIC_0_APB_M_PREADY ),
         .F_HM0_RESP                              ( FIC_0_APB_M_PSLVERR ),
@@ -469,9 +440,9 @@ MSS_ADLIB_INST(
         .COMMS_INT                               (  ),
         .CONFIG_PRESET_N                         ( FIC_2_APB_M_PRESET_N_0 ),
         .EDAC_ERROR                              (  ),
-        .F_FM0_RDATA                             ( FIC_0_APB_SLAVE_PRDATA ),
-        .F_FM0_READYOUT                          ( FIC_0_APB_SLAVE_PREADY ),
-        .F_FM0_RESP                              ( FIC_0_APB_SLAVE_PSLVERR ),
+        .F_FM0_RDATA                             (  ),
+        .F_FM0_READYOUT                          (  ),
+        .F_FM0_RESP                              (  ),
         .F_HM0_ADDR                              ( FIC_0_APB_MASTER_PADDR ),
         .F_HM0_ENABLE                            ( FIC_0_APB_MASTER_PENABLE ),
         .F_HM0_SEL                               ( FIC_0_APB_MASTER_PSELx ),

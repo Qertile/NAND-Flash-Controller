@@ -3114,37 +3114,6 @@
 </data>
 <separator/>
 <data>
-<name>FIC_0_AMBA_SLAVE</name>
-<table>
-<header>
- <cell>Name</cell>
- <cell>Subsystem</cell>
- <cell>Vendor</cell>
- <cell>Version</cell>
-</header>
-<row>
- <cell>AMBA_MASTER</cell>
- <cell>MSS FIC_0 - Fabric Master Subsystem</cell>
- <cell>Actel</cell>
- <cell>0.0.102</cell>
-</row>
-</table>
-<cdata>
-<name>Configuration</name>
-<table>
-<header>
- <cell>Parameter</cell>
- <cell>Value</cell>
-</header>
-<row>
- <cell>AMBA_INTERFACE_TYPE</cell>
- <cell>APB3</cell>
-</row>
-</table>
-</cdata>
-</data>
-<separator/>
-<data>
 <name>Interrupt Configuration</name>
 <table>
 <header>
@@ -3203,11 +3172,6 @@
 <row>
  <cell>MSS_INT_F2M[15:0]</cell>
  <cell>IN</cell>
- <cell>-</cell>
-</row>
-<row>
- <cell>FIC_0_AMBA_SLAVE</cell>
- <cell>SLAVE</cell>
  <cell>-</cell>
 </row>
 <row>

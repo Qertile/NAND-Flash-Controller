@@ -5,7 +5,7 @@
   <spirit:version>1.0</spirit:version>
   <spirit:busInterfaces>
   <spirit:busInterface>
-    <spirit:name>BIF_NAND</spirit:name>
+    <spirit:name>APB_Slave_0</spirit:name>
     <spirit:busType spirit:vendor="AMBA" spirit:library="AMBA2" spirit:name="APB" spirit:version="r0p0"/>
     <spirit:slave></spirit:slave>
     <spirit:signalMap>
@@ -20,11 +20,11 @@
       <spirit:signalName>
         <spirit:componentSignalName>PWDATA</spirit:componentSignalName><spirit:busSignalName>PWDATA</spirit:busSignalName></spirit:signalName>
       <spirit:signalName>
-        <spirit:componentSignalName>PREADY</spirit:componentSignalName><spirit:busSignalName>PREADY</spirit:busSignalName></spirit:signalName>
+        <spirit:componentSignalName>PSLVERR_S0</spirit:componentSignalName><spirit:busSignalName>PSLVERR</spirit:busSignalName></spirit:signalName>
       <spirit:signalName>
-        <spirit:componentSignalName>PSLVERR</spirit:componentSignalName><spirit:busSignalName>PSLVERR</spirit:busSignalName></spirit:signalName>
+        <spirit:componentSignalName>PSEL</spirit:componentSignalName><spirit:busSignalName>PSELx</spirit:busSignalName></spirit:signalName>
       <spirit:signalName>
-        <spirit:componentSignalName>PSEL</spirit:componentSignalName><spirit:busSignalName>PSELx</spirit:busSignalName></spirit:signalName></spirit:signalMap>
+        <spirit:componentSignalName>PREADY_S0</spirit:componentSignalName><spirit:busSignalName>PREADY</spirit:busSignalName></spirit:signalName></spirit:signalMap>
     <spirit:vendorExtensions></spirit:vendorExtensions>
   </spirit:busInterface>
   </spirit:busInterfaces>
@@ -73,11 +73,11 @@
         <spirit:right>0</spirit:right>
       </spirit:signal>
       <spirit:signal>
-        <spirit:name>PREADY</spirit:name>
+        <spirit:name>PREADY_S0</spirit:name>
         <spirit:direction>out</spirit:direction>
       </spirit:signal>
       <spirit:signal>
-        <spirit:name>PSLVERR</spirit:name>
+        <spirit:name>PSLVERR_S0</spirit:name>
         <spirit:direction>out</spirit:direction>
       </spirit:signal>
       <spirit:signal>

@@ -1,5 +1,5 @@
 //--------------------------------------------------------------------
-// Created by Microsemi SmartDesign Thu Jul  6 10:22:09 2023
+// Created by Microsemi SmartDesign Thu Jul  6 16:59:22 2023
 // Parameters for CoreResetP
 //--------------------------------------------------------------------
 
