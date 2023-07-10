@@ -9,8 +9,8 @@ The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 - [ ] addr
   - [ ] location
 - [ ] FIFO 
-  - [ ] FIFO addr
-  - [ ] FIFO depth
+  - [ ] TX FIFO 
+  - [ ] RX FIFO 
 - [ ] Register Map
   - [ ] control register
     - [ ] internal command
