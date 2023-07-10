@@ -1,0 +1,33 @@
+Microsemi Corporation - Microsemi Libero Software Release v2022.1 (Version 2022.1.0.10)
+
+Date      :  Mon Jul 10 14:26:38 2023
+Project   :  C:\Users\Nathan\Desktop\UADL\Internship\Acromax\NAND-Flash-Controller\Project
+Component :  COREFIFO_C0
+Family    :  SmartFusion2
+
+
+HDL source files for all Synthesis and Simulation tools:
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vlog/core/COREFIFO.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vlog/core/corefifo_sync.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vlog/core/corefifo_sync_scntr.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vlog/core/corefifo_async.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vlog/core/corefifo_NstagesSync.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vlog/core/corefifo_grayToBinConv.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vlog/core/corefifo_fwft.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/COREFIFO_C0/COREFIFO_C0.v
+
+Stimulus files for all Simulation tools:
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/COREFIFO_C0/COREFIFO_C0_0/mti/scripts/wave.do
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/COREFIFO_C0/COREFIFO_C0_0/mti/scripts/runall.do
+
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/COREFIFO_C0/COREFIFO_C0_0/coreparameters.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vlog/test/user/top_define.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vlog/test/user/clock_driver.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vlog/test/user/fifo_driver.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vlog/test/user/fifo_monitor.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vlog/test/user/g4_dp_ext_mem.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/work/COREFIFO_C0/COREFIFO_C0_0/rtl/vlog/test/user/testbench.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vlog/test/user/MEM_WeqR.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vlog/test/user/MEM_WgtR.v
+    C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/component/Actel/DirectCore/COREFIFO/3.0.101/rtl/vlog/test/user/MEM_WltR.v
+

@@ -39,7 +39,7 @@ module NAND_controller(
     nWE, 
     nRE, 
     nWP,
-    IO
+    FLASH_IO
 );
 //--------------------------------------------------------------------
 // Input
@@ -63,7 +63,7 @@ output       ALE;
 output       nWE; 
 output       nRE; 
 output       nWP;
-output [7:0] IO;
+output [7:0] FLASH_IO;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
@@ -84,9 +84,68 @@ wire         APB_bif_PSLVERR_net_0;
 wire         wr_enable;
 wire         rd_enable;
 
+reg [511:0]  data_fifo;
+
 //<statements>
 assign wr_enable = (PENABLE && PWRITE && PSEL);
 assign rd_enable = (!PWRITE && PSEL);
+
+if (wr_enable) begin
+    PREADY_S0 <= 1'b1;    
+end
+else begin
+    PREADY_S0 <= 1'b0;    
+end
+
+/* ----- FSM ----- 
+
+if (PADDR == Tx_FIFO_addr){
+    FSM = WRITE
+}
+else if (PADDR == Rx_FIFO_addr){
+    FSM = READ
+}
+else FSM = IDLE
+
+switch (FSM){
+    WRITE:
+        if (wr_enable){
+            PREADY = HIGH
+
+            --- UART_send ---
+            ( PWDATA into FIFO )
+            
+            FIFO to FLASH_IO
+
+            PREADY = LOW
+        }
+            
+
+    READ:
+        if (rd_enable){
+            PREADY = HIGH
+
+            ( FIFO to FLASH_IO )
+            
+            --- UART_get_rx ---
+            FIFO into PRDATA
+            
+            PREADY = LOW
+        }
+
+    IDLE:
+    
+        PREADY = LOW
+
+
+}
+
+
+
+
+
+
+*/
 
 
 

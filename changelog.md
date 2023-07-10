@@ -1,10 +1,30 @@
 # NFC NAND Flash Controller
 The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 
+
+## TO-DO
+- [ ] command
+  - [ ] from master
+  - [ ] to slave
+- [ ] addr
+  - [ ] location
+- [ ] FIFO 
+  - [ ] FIFO addr
+  - [ ] FIFO depth
+- [ ] Register Map
+  - [ ] control register
+    - [ ] internal command
+  - [ ] status register
+- [ ] busy hand shake
+- [ ] interrupt
+- [ ] FSM
+
 -----------------------------------
 ## Unreleased v0.1.3 (2023.07.##)
 ### New
+- create to-do list and psuedo code
 ### Changed
+- rename IO to FLASH_IO
 ### Removed
 ### Deprecated
 ### Fixed
