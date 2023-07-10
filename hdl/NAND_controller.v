@@ -64,7 +64,31 @@ output       nWE;
 output       nRE; 
 output       nWP;
 output [7:0] IO;
+//--------------------------------------------------------------------
+// Nets
+//--------------------------------------------------------------------
+wire   [4:0] PADDR;
+wire         PENABLE;
+wire   [7:0] APB_bif_PRDATA;
+wire         APB_bif_PREADY;
+wire         PSEL;
+wire         APB_bif_PSLVERR;
+wire   [7:0] PWDATA;
+wire         PWRITE;
+wire         PCLK;
+wire         PRESETN;
+wire   [7:0] APB_bif_PRDATA_net_0;
+wire         APB_bif_PREADY_net_0;
+wire         APB_bif_PSLVERR_net_0;
+
+wire         wr_enable;
+wire         rd_enable;
+
 //<statements>
+assign wr_enable = (PENABLE && PWRITE && PSEL);
+assign rd_enable = (!PWRITE && PSEL);
+
+
 
 endmodule
 

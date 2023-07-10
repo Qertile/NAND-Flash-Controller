@@ -481,8 +481,15 @@ SIZE="1695"
 ENDFILE
 VALUE "<project>\component\work\SF2\SF2.cxf,actgen_cxf"
 STATE="utd"
-TIME="1688634015"
-SIZE="1787"
+TIME="1688813949"
+SIZE="2064"
+ENDFILE
+VALUE "<project>\component\work\SF2\SF2.v,hdl"
+STATE="utd"
+TIME="1688813948"
+SIZE="6438"
+PARENT="<project>\component\work\SF2\SF2.cxf"
+IS_READONLY="TRUE"
 ENDFILE
 VALUE "<project>\component\work\SF2_sb\CCC_0\SF2_sb_CCC_0_FCCC.cxf,actgen_cxf"
 STATE="utd"
@@ -570,8 +577,8 @@ SIZE="2044"
 ENDFILE
 VALUE "<project>\hdl\NAND_controller.v,hdl"
 STATE="utd"
-TIME="1688633987"
-SIZE="1632"
+TIME="1688958316"
+SIZE="2276"
 ENDFILE
 VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
 STATE="utd"
@@ -621,7 +628,7 @@ SIZE="779"
 ENDFILE
 VALUE "<project>\simulation\subsystem.bfm,sim"
 STATE="utd"
-TIME="1688633093"
+TIME="1688813949"
 SIZE="798"
 PARENT="<project>\component\work\SF2\SF2.cxf"
 ENDFILE
@@ -685,12 +692,6 @@ ENDUsed_File_List
 ENDLIST
 ENDLIST
 ENDLIST
-LIST "SF2::work"
-FILE "<project>\component\work\SF2\SF2.cxf,actgen_cxf"
-LIST Other_Association
-VALUE "<project>\simulation\subsystem.bfm,sim"
-ENDLIST
-ENDLIST
 LIST "SF2_sb_MSS::work"
 FILE "<project>\component\work\SF2_sb_MSS\SF2_sb_MSS.v,hdl"
 LIST Other_Association
@@ -722,9 +723,6 @@ VALUE "<project>\stimulus\controller_tb.v,tb_hdl"
 ENDLIST
 ENDLIST
 LIST Other_Association
-LIST SF2
-VALUE "<project>\simulation\subsystem.bfm,sim"
-ENDLIST
 LIST CoreAPB3
 VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
 VALUE "<project>\simulation\coreapb3_usertb_master.bfm,sim"
@@ -830,8 +828,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\bin\synplify_pro.exe"
-PARAM=""
-BATCH=0
+PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
+BATCH=1
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -907,14 +905,6 @@ SUBBLOCK "CoreUARTapb_C0_CoreUARTapb_C0_0_ram128x8_pa4::work","component\work\Co
 ENDLIST
 LIST "CoreUARTapb_C0_CoreUARTapb_C0_0_ram128x8_pa4::work","component\work\CoreUARTapb_C0\CoreUARTapb_C0_0\rtl\vlog\core_obfuscated\fifo_256x8_g4.v","FALSE","FALSE"
 ENDLIST
-LIST "DESIGN_FIRMWARE::work","component\work\DESIGN_FIRMWARE\DESIGN_FIRMWARE.cxf","TRUE","FALSE"
-SUBBLOCK "SmartFusion2_CMSIS::work","","FALSE","FALSE"
-SUBBLOCK "SmartFusion2_MSS_HPDMA_Driver::work","","FALSE","FALSE"
-SUBBLOCK "SmartFusion2_MSS_NVM_Driver::work","","FALSE","FALSE"
-SUBBLOCK "SmartFusion2_MSS_RTC_Driver::work","","FALSE","FALSE"
-SUBBLOCK "SmartFusion2_MSS_System_Services_Driver::work","","FALSE","FALSE"
-SUBBLOCK "SmartFusion2_MSS_Timer_Driver::work","","FALSE","FALSE"
-ENDLIST
 LIST "CoreResetP::work","component\Actel\DirectCore\CoreResetP\7.1.100\rtl\vlog\core\coreresetp.v","FALSE","FALSE"
 SUBBLOCK "coreresetp_pcie_hotreset::work","component\Actel\DirectCore\CoreResetP\7.1.100\rtl\vlog\core\coreresetp_pcie_hotreset.v","FALSE","FALSE"
 ENDLIST
@@ -942,10 +932,10 @@ LIST "RCOSC_25_50MHZ::work","component\Actel\SgCore\OSC\2.0.101\osc_comps.v","FA
 ENDLIST
 LIST "RCOSC_25_50MHZ_FAB::work","component\Actel\SgCore\OSC\2.0.101\osc_comps.v","FALSE","FALSE"
 ENDLIST
-LIST "SF2::work","component\work\SF2\SF2.cxf","TRUE","FALSE"
+LIST "SF2::work","component\work\SF2\SF2.v","TRUE","FALSE"
 SUBBLOCK "CoreAPB3_C0::work","component\work\CoreAPB3_C0\CoreAPB3_C0.v","TRUE","FALSE"
-SUBBLOCK "SF2_sb::work","component\work\SF2_sb\SF2_sb.v","TRUE","FALSE"
 SUBBLOCK "NAND_controller::work","hdl\NAND_controller.v","FALSE","FALSE"
+SUBBLOCK "SF2_sb::work","component\work\SF2_sb\SF2_sb.v","TRUE","FALSE"
 ENDLIST
 LIST "SF2_sb::work","component\work\SF2_sb\SF2_sb.v","TRUE","FALSE"
 SUBBLOCK "SF2_sb_CCC_0_FCCC::work","component\work\SF2_sb\CCC_0\SF2_sb_CCC_0_FCCC.v","FALSE","FALSE"
@@ -961,18 +951,6 @@ SUBBLOCK "RCOSC_25_50MHZ::work","component\Actel\SgCore\OSC\2.0.101\osc_comps.v"
 ENDLIST
 LIST "SF2_sb_MSS::work","component\work\SF2_sb_MSS\SF2_sb_MSS.v","TRUE","FALSE"
 SUBBLOCK "MSS_010::work","component\work\SF2_sb_MSS\SF2_sb_MSS_syn.v","FALSE","FALSE"
-ENDLIST
-LIST "SmartFusion2_CMSIS::work","","FALSE","FALSE"
-ENDLIST
-LIST "SmartFusion2_MSS_HPDMA_Driver::work","","FALSE","FALSE"
-ENDLIST
-LIST "SmartFusion2_MSS_NVM_Driver::work","","FALSE","FALSE"
-ENDLIST
-LIST "SmartFusion2_MSS_RTC_Driver::work","","FALSE","FALSE"
-ENDLIST
-LIST "SmartFusion2_MSS_System_Services_Driver::work","","FALSE","FALSE"
-ENDLIST
-LIST "SmartFusion2_MSS_Timer_Driver::work","","FALSE","FALSE"
 ENDLIST
 LIST "XTLOSC::work","component\Actel\SgCore\OSC\2.0.101\osc_comps.v","FALSE","FALSE"
 ENDLIST

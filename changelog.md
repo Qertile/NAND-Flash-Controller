@@ -2,7 +2,7 @@
 The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 
 -----------------------------------
-## Unreleased v0.1.2 (2023.07.##)
+## Unreleased v0.1.3 (2023.07.##)
 ### New
 ### Changed
 ### Removed
@@ -13,7 +13,12 @@ The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 ### Reference
 
 -----------------------------------
-## NFC v0.1.1 (2023.07.##)
+## NFC v0.1.2 (2023.07.10)
+### New
+- create wire `wr_enable` and `rd_enable`
+
+-----------------------------------
+## NFC v0.1.1 (2023.07.07)
 ### New
 1. connect PCLK to FIC_0_CLK
 ### Changed
