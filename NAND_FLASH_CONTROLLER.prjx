@@ -155,6 +155,68 @@ MODULE_UNDER_TEST="testbench"
 SIMULATION_TIME="-all"
 IS_READONLY="TRUE"
 ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\COREFIFO.cxf,actgen_cxf"
+STATE="utd"
+TIME="1688978182"
+SIZE="1298"
+PARENT="<project>\component\work\COREFIFO_C0\COREFIFO_C0.cxf"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\clock_driver.v,tb_hdl"
+STATE="utd"
+TIME="1688970398"
+SIZE="697"
+PARENT="<project>\component\Actel\DirectCore\COREFIFO\3.0.101\COREFIFO.cxf"
+PARENT="<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\COREFIFO_C0_COREFIFO_C0_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\fifo_driver.v,tb_hdl"
+STATE="utd"
+TIME="1688970398"
+SIZE="13955"
+PARENT="<project>\component\Actel\DirectCore\COREFIFO\3.0.101\COREFIFO.cxf"
+PARENT="<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\COREFIFO_C0_COREFIFO_C0_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\fifo_monitor.v,tb_hdl"
+STATE="utd"
+TIME="1688970398"
+SIZE="22096"
+PARENT="<project>\component\Actel\DirectCore\COREFIFO\3.0.101\COREFIFO.cxf"
+PARENT="<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\COREFIFO_C0_COREFIFO_C0_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\g4_dp_ext_mem.v,tb_hdl"
+STATE="utd"
+TIME="1688970398"
+SIZE="3801"
+PARENT="<project>\component\Actel\DirectCore\COREFIFO\3.0.101\COREFIFO.cxf"
+PARENT="<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\COREFIFO_C0_COREFIFO_C0_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WeqR.v,tb_hdl"
+STATE="utd"
+TIME="1688970398"
+SIZE="2194"
+PARENT="<project>\component\Actel\DirectCore\COREFIFO\3.0.101\COREFIFO.cxf"
+PARENT="<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\COREFIFO_C0_COREFIFO_C0_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WgtR.v,tb_hdl"
+STATE="utd"
+TIME="1688970398"
+SIZE="2287"
+PARENT="<project>\component\Actel\DirectCore\COREFIFO\3.0.101\COREFIFO.cxf"
+PARENT="<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\COREFIFO_C0_COREFIFO_C0_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WltR.v,tb_hdl"
+STATE="utd"
+TIME="1688970398"
+SIZE="1981"
+PARENT="<project>\component\Actel\DirectCore\COREFIFO\3.0.101\COREFIFO.cxf"
+PARENT="<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\COREFIFO_C0_COREFIFO_C0_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
 VALUE "<project>\component\Actel\DirectCore\CoreResetP\7.1.100\CoreResetP.cxf,actgen_cxf"
 STATE="utd"
 TIME="1688633962"
@@ -312,6 +374,112 @@ TIME="1688611287"
 SIZE="12822"
 PARENT="<project>\component\work\CoreAPB3_C0\CoreAPB3_C0.cxf"
 IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0.cxf,actgen_cxf"
+STATE="utd"
+TIME="1688978183"
+SIZE="5180"
+ENDFILE
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0.v,hdl"
+STATE="utd"
+TIME="1688978182"
+SIZE="6195"
+PARENT="<project>\component\work\COREFIFO_C0\COREFIFO_C0.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\COREFIFO_C0_COREFIFO_C0_0_COREFIFO.cxf,actgen_cxf"
+STATE="utd"
+TIME="1688978182"
+SIZE="3613"
+PARENT="<project>\component\work\COREFIFO_C0\COREFIFO_C0.cxf"
+ENDFILE
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\coreparameters.v,tb_hdl"
+STATE="utd"
+TIME="1688978182"
+SIZE="1025"
+PARENT="<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\COREFIFO_C0_COREFIFO_C0_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+IS_INCLUDED="TRUE"
+ENDFILE
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\mti\scripts\runall.do,do"
+STATE="utd"
+TIME="1688978181"
+SIZE="23"
+PARENT="<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\COREFIFO_C0_COREFIFO_C0_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\mti\scripts\wave.do,do"
+STATE="utd"
+TIME="1688978181"
+SIZE="3286"
+PARENT="<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\COREFIFO_C0_COREFIFO_C0_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v,hdl"
+STATE="utd"
+TIME="1688978181"
+SIZE="71769"
+PARENT="<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\COREFIFO_C0_COREFIFO_C0_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v,hdl"
+STATE="utd"
+TIME="1688978181"
+SIZE="55217"
+PARENT="<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\COREFIFO_C0_COREFIFO_C0_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v,hdl"
+STATE="utd"
+TIME="1688978182"
+SIZE="13479"
+PARENT="<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\COREFIFO_C0_COREFIFO_C0_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_grayToBinConv.v,hdl"
+STATE="utd"
+TIME="1688978182"
+SIZE="2743"
+PARENT="<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\COREFIFO_C0_COREFIFO_C0_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_NstagesSync.v,hdl"
+STATE="utd"
+TIME="1688978181"
+SIZE="2522"
+PARENT="<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\COREFIFO_C0_COREFIFO_C0_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_sync.v,hdl"
+STATE="utd"
+TIME="1688978181"
+SIZE="33523"
+PARENT="<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\COREFIFO_C0_COREFIFO_C0_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_sync_scntr.v,hdl"
+STATE="utd"
+TIME="1688978181"
+SIZE="23720"
+PARENT="<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\COREFIFO_C0_COREFIFO_C0_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\test\user\testbench.v,tb_hdl"
+STATE="utd"
+TIME="1688978181"
+SIZE="19026"
+PARENT="<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\COREFIFO_C0_COREFIFO_C0_0_COREFIFO.cxf"
+MODULE_UNDER_TEST="testbench"
+SIMULATION_TIME=" -all"
+IS_READONLY="TRUE"
+ENDFILE
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\test\user\top_define.v,tb_hdl"
+STATE="utd"
+TIME="1688978181"
+SIZE="401"
+PARENT="<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\COREFIFO_C0_COREFIFO_C0_0_COREFIFO.cxf"
+IS_READONLY="TRUE"
+IS_INCLUDED="TRUE"
 ENDFILE
 VALUE "<project>\component\work\CoreUARTapb_C0\CoreUARTapb_C0.cxf,actgen_cxf"
 STATE="utd"
@@ -481,15 +649,8 @@ SIZE="1695"
 ENDFILE
 VALUE "<project>\component\work\SF2\SF2.cxf,actgen_cxf"
 STATE="utd"
-TIME="1688813949"
-SIZE="2064"
-ENDFILE
-VALUE "<project>\component\work\SF2\SF2.v,hdl"
-STATE="utd"
-TIME="1688813948"
-SIZE="6438"
-PARENT="<project>\component\work\SF2\SF2.cxf"
-IS_READONLY="TRUE"
+TIME="1688979210"
+SIZE="1787"
 ENDFILE
 VALUE "<project>\component\work\SF2_sb\CCC_0\SF2_sb_CCC_0_FCCC.cxf,actgen_cxf"
 STATE="utd"
@@ -565,6 +726,11 @@ END_USE_CONSTRAINT
 USE_FOR_ANY_TOOL="FALSE"
 IS_READONLY="TRUE"
 ENDFILE
+VALUE "<project>\hdl\FIFO.v,hdl"
+STATE="utd"
+TIME="1688979230"
+SIZE="877"
+ENDFILE
 VALUE "<project>\hdl\inc.v,hdl"
 STATE="utd"
 TIME="1686666970"
@@ -577,8 +743,8 @@ SIZE="2044"
 ENDFILE
 VALUE "<project>\hdl\NAND_controller.v,hdl"
 STATE="utd"
-TIME="1688958316"
-SIZE="2276"
+TIME="1689057139"
+SIZE="3184"
 ENDFILE
 VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
 STATE="utd"
@@ -653,6 +819,23 @@ ENDLIST
 LIST UsedFile
 ENDLIST
 LIST NewModulesInfo
+LIST "COREFIFO_C0_COREFIFO_C0_0_COREFIFO::work"
+FILE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v,hdl"
+LIST Other_Association
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\coreparameters.v,tb_hdl"
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\test\user\top_define.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\clock_driver.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\fifo_driver.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\fifo_monitor.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\g4_dp_ext_mem.v,tb_hdl"
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\test\user\testbench.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WeqR.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WgtR.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WltR.v,tb_hdl"
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\mti\scripts\wave.do,do"
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\mti\scripts\runall.do,do"
+ENDLIST
+ENDLIST
 LIST "CoreUARTapb_C0_CoreUARTapb_C0_0_CoreUARTapb::work"
 FILE "<project>\component\work\CoreUARTapb_C0\CoreUARTapb_C0_0\rtl\vlog\core_obfuscated\CoreUARTapb.v,hdl"
 LIST Other_Association
@@ -759,6 +942,20 @@ VALUE "<project>\component\work\CoreUARTapb_C0\CoreUARTapb_C0_0\rtl\vlog\test\us
 VALUE "<project>\component\work\CoreUARTapb_C0\CoreUARTapb_C0_0\mti\scripts\bfmtovec_compile.do,do"
 VALUE "<project>\component\work\CoreUARTapb_C0\CoreUARTapb_C0_0\mti\scripts\wave_vlog_amba.do,do"
 ENDLIST
+LIST COREFIFO_C0_COREFIFO_C0_0_COREFIFO
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\coreparameters.v,tb_hdl"
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\test\user\top_define.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\clock_driver.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\fifo_driver.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\fifo_monitor.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\g4_dp_ext_mem.v,tb_hdl"
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\test\user\testbench.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WeqR.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WgtR.v,tb_hdl"
+VALUE "<project>\component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WltR.v,tb_hdl"
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\mti\scripts\wave.do,do"
+VALUE "<project>\component\work\COREFIFO_C0\COREFIFO_C0_0\mti\scripts\runall.do,do"
+ENDLIST
 ENDLIST
 LIST SimulationOptions
 UseAutomaticDoFile=true
@@ -828,8 +1025,8 @@ NAME="Synplify Pro ME"
 FUNCTION="Synthesis"
 TOOL="Synplify Pro ME"
 LOCATION="C:\Microsemi\Libero_SoC_v2022.1\SynplifyPro\bin\synplify_pro.exe"
-PARAM="-licensetype synplifypro_actel -batch -log synplify.log"
-BATCH=1
+PARAM=""
+BATCH=0
 LICENSE=""
 IS32BIT="1"
 EndProfile
@@ -878,14 +1075,36 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-HDL;component\work\CoreUARTapb_C0\CoreUARTapb_C0.v;0
-HDL;hdl\NAND_controller.v;0
-SmartDesign;SF2;0
-ACTIVEVIEW;SF2
+StartPage;StartPage;0
+ACTIVEVIEW;StartPage
 ENDLIST
 LIST ModuleSubBlockList
 LIST "CoreAPB3_C0::work","component\work\CoreAPB3_C0\CoreAPB3_C0.v","TRUE","FALSE"
 SUBBLOCK "CoreAPB3::COREAPB3_LIB","component\Actel\DirectCore\CoreAPB3\4.2.100\rtl\vlog\core\coreapb3.v","FALSE","FALSE"
+ENDLIST
+LIST "COREFIFO_C0::work","component\work\COREFIFO_C0\COREFIFO_C0.v","TRUE","FALSE"
+SUBBLOCK "COREFIFO_C0_COREFIFO_C0_0_COREFIFO::work","component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v","FALSE","FALSE"
+ENDLIST
+LIST "COREFIFO_C0_COREFIFO_C0_0_COREFIFO::work","component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v","FALSE","FALSE"
+SUBBLOCK "COREFIFO_C0_COREFIFO_C0_0_corefifo_async::work","component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v","FALSE","FALSE"
+SUBBLOCK "COREFIFO_C0_COREFIFO_C0_0_corefifo_fwft::work","component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v","FALSE","FALSE"
+SUBBLOCK "COREFIFO_C0_COREFIFO_C0_0_corefifo_sync::work","component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_sync.v","FALSE","FALSE"
+SUBBLOCK "COREFIFO_C0_COREFIFO_C0_0_ram_wrapper::work","","FALSE","FALSE"
+SUBBLOCK "COREFIFO_C0_COREFIFO_C0_0_corefifo_sync_scntr::work","component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_sync_scntr.v","FALSE","FALSE"
+ENDLIST
+LIST "COREFIFO_C0_COREFIFO_C0_0_corefifo_async::work","component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_async.v","FALSE","FALSE"
+SUBBLOCK "COREFIFO_C0_COREFIFO_C0_0_corefifo_NstagesSync::work","component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_NstagesSync.v","FALSE","FALSE"
+SUBBLOCK "COREFIFO_C0_COREFIFO_C0_0_corefifo_grayToBinConv::work","component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_grayToBinConv.v","FALSE","FALSE"
+ENDLIST
+LIST "COREFIFO_C0_COREFIFO_C0_0_corefifo_fwft::work","component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_fwft.v","FALSE","FALSE"
+ENDLIST
+LIST "COREFIFO_C0_COREFIFO_C0_0_corefifo_grayToBinConv::work","component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_grayToBinConv.v","FALSE","FALSE"
+ENDLIST
+LIST "COREFIFO_C0_COREFIFO_C0_0_corefifo_NstagesSync::work","component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_NstagesSync.v","FALSE","FALSE"
+ENDLIST
+LIST "COREFIFO_C0_COREFIFO_C0_0_corefifo_sync::work","component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_sync.v","FALSE","FALSE"
+ENDLIST
+LIST "COREFIFO_C0_COREFIFO_C0_0_ram_wrapper::work","","FALSE","FALSE"
 ENDLIST
 LIST "coreresetp_pcie_hotreset::work","component\Actel\DirectCore\CoreResetP\7.1.100\rtl\vlog\core\coreresetp_pcie_hotreset.v","FALSE","FALSE"
 ENDLIST
@@ -905,6 +1124,8 @@ SUBBLOCK "CoreUARTapb_C0_CoreUARTapb_C0_0_ram128x8_pa4::work","component\work\Co
 ENDLIST
 LIST "CoreUARTapb_C0_CoreUARTapb_C0_0_ram128x8_pa4::work","component\work\CoreUARTapb_C0\CoreUARTapb_C0_0\rtl\vlog\core_obfuscated\fifo_256x8_g4.v","FALSE","FALSE"
 ENDLIST
+LIST "COREFIFO_C0_COREFIFO_C0_0_corefifo_sync_scntr::work","component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_sync_scntr.v","FALSE","FALSE"
+ENDLIST
 LIST "CoreResetP::work","component\Actel\DirectCore\CoreResetP\7.1.100\rtl\vlog\core\coreresetp.v","FALSE","FALSE"
 SUBBLOCK "coreresetp_pcie_hotreset::work","component\Actel\DirectCore\CoreResetP\7.1.100\rtl\vlog\core\coreresetp_pcie_hotreset.v","FALSE","FALSE"
 ENDLIST
@@ -920,9 +1141,11 @@ LIST "CoreUARTapb_C0_CoreUARTapb_C0_0_Tx_async::work","component\work\CoreUARTap
 ENDLIST
 LIST "MSS_010::work","component\work\SF2_sb_MSS\SF2_sb_MSS_syn.v","FALSE","FALSE"
 ENDLIST
+LIST "fifo::work","hdl\FIFO.v","FALSE","FALSE"
+ENDLIST
 LIST "MT29F8G08ABACAWP::work","hdl\nand.v","FALSE","FALSE"
 ENDLIST
-LIST "NAND_controller::work","hdl\NAND_controller.v","FALSE","FALSE"
+LIST "NAND_controller::work","","FALSE","FALSE"
 ENDLIST
 LIST "RCOSC_1MHZ::work","component\Actel\SgCore\OSC\2.0.101\osc_comps.v","FALSE","FALSE"
 ENDLIST
@@ -932,10 +1155,10 @@ LIST "RCOSC_25_50MHZ::work","component\Actel\SgCore\OSC\2.0.101\osc_comps.v","FA
 ENDLIST
 LIST "RCOSC_25_50MHZ_FAB::work","component\Actel\SgCore\OSC\2.0.101\osc_comps.v","FALSE","FALSE"
 ENDLIST
-LIST "SF2::work","component\work\SF2\SF2.v","TRUE","FALSE"
+LIST "SF2::work","component\work\SF2\SF2.cxf","TRUE","FALSE"
 SUBBLOCK "CoreAPB3_C0::work","component\work\CoreAPB3_C0\CoreAPB3_C0.v","TRUE","FALSE"
-SUBBLOCK "NAND_controller::work","hdl\NAND_controller.v","FALSE","FALSE"
 SUBBLOCK "SF2_sb::work","component\work\SF2_sb\SF2_sb.v","TRUE","FALSE"
+SUBBLOCK "NAND_controller::work","","FALSE","FALSE"
 ENDLIST
 LIST "SF2_sb::work","component\work\SF2_sb\SF2_sb.v","TRUE","FALSE"
 SUBBLOCK "SF2_sb_CCC_0_FCCC::work","component\work\SF2_sb\CCC_0\SF2_sb_CCC_0_FCCC.v","FALSE","FALSE"
@@ -955,6 +1178,8 @@ ENDLIST
 LIST "XTLOSC::work","component\Actel\SgCore\OSC\2.0.101\osc_comps.v","FALSE","FALSE"
 ENDLIST
 LIST "XTLOSC_FAB::work","component\Actel\SgCore\OSC\2.0.101\osc_comps.v","FALSE","FALSE"
+ENDLIST
+LIST "clock_driver::work","component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\clock_driver.v","FALSE","TRUE"
 ENDLIST
 LIST "controller_tb::work","stimulus\controller_tb.v","FALSE","TRUE"
 SUBBLOCK "MT29F8G08ABACAWP::work","hdl\nand.v","FALSE","FALSE"
@@ -988,7 +1213,29 @@ LIST "CoreUARTapb_C0_CoreUARTapb_C0_0_BFM_MAIN::work","component\work\CoreUARTap
 ENDLIST
 LIST "CoreUARTapb_C0_CoreUARTapb_C0_0_BFMA1l1OII::work","component\work\CoreUARTapb_C0\CoreUARTapb_C0_0\rtl\vlog\amba_bfm\bfm_ahbtoapb.v","FALSE","TRUE"
 ENDLIST
+LIST "fifo_driver::work","component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\fifo_driver.v","FALSE","TRUE"
+ENDLIST
+LIST "fifo_monitor::work","component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\fifo_monitor.v","FALSE","TRUE"
+ENDLIST
+LIST "g4_dp_ext_mem::work","component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\g4_dp_ext_mem.v","FALSE","TRUE"
+SUBBLOCK "MEM_WgtR::work","component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WgtR.v","FALSE","TRUE"
+SUBBLOCK "MEM_WltR::work","component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WltR.v","FALSE","TRUE"
+SUBBLOCK "MEM_WeqR::work","component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WeqR.v","FALSE","TRUE"
+ENDLIST
+LIST "MEM_WeqR::work","component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WeqR.v","FALSE","TRUE"
+ENDLIST
 LIST "CoreUARTapb_C0_CoreUARTapb_C0_0_BFM_MAIN::work","component\work\CoreUARTapb_C0\CoreUARTapb_C0_0\rtl\vlog\amba_bfm\bfm_main.v","FALSE","TRUE"
+ENDLIST
+LIST "MEM_WgtR::work","component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WgtR.v","FALSE","TRUE"
+ENDLIST
+LIST "MEM_WltR::work","component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WltR.v","FALSE","TRUE"
+ENDLIST
+LIST "testbench::work","component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\test\user\testbench.v","FALSE","TRUE"
+SUBBLOCK "COREFIFO_C0_COREFIFO_C0_0_COREFIFO::work","component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\COREFIFO.v","FALSE","FALSE"
+SUBBLOCK "clock_driver::work","component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\clock_driver.v","FALSE","TRUE"
+SUBBLOCK "fifo_driver::work","component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\fifo_driver.v","FALSE","TRUE"
+SUBBLOCK "fifo_monitor::work","component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\fifo_monitor.v","FALSE","TRUE"
+SUBBLOCK "g4_dp_ext_mem::work","component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\g4_dp_ext_mem.v","FALSE","TRUE"
 ENDLIST
 LIST "testbench::work","component\work\CoreUARTapb_C0\CoreUARTapb_C0_0\rtl\vlog\test\user\testbench.v","FALSE","TRUE"
 SUBBLOCK "CoreUARTapb_C0_CoreUARTapb_C0_0_CoreUARTapb::work","component\work\CoreUARTapb_C0\CoreUARTapb_C0_0\rtl\vlog\core_obfuscated\CoreUARTapb.v","FALSE","FALSE"

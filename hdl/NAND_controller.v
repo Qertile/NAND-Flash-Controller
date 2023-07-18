@@ -84,18 +84,32 @@ wire         APB_bif_PSLVERR_net_0;
 wire         wr_enable;
 wire         rd_enable;
 
-reg [511:0]  data_fifo;
+/* Control registers and Status register  */
+reg     [15:0]  Cmd;
+reg     [39:0]  Addr;
+reg     [7:0]   Length;
+reg     [7:0]   Status;
 
 //<statements>
 assign wr_enable = (PENABLE && PWRITE && PSEL);
 assign rd_enable = (!PWRITE && PSEL);
 
-if (wr_enable) begin
-    PREADY_S0 <= 1'b1;    
-end
-else begin
-    PREADY_S0 <= 1'b0;    
-end
+fifo TX_FIFO;(
+    // Input
+    .clk(PCLK)
+    .reset(PRESETN)
+    .din
+    .write_en
+    .read_en
+
+    // Output
+    .dout
+    .full
+    .empty
+)
+
+
+fifo RX_FIFO;
 
 /* ----- FSM ----- 
 
