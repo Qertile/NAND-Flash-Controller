@@ -649,7 +649,7 @@ SIZE="1695"
 ENDFILE
 VALUE "<project>\component\work\SF2\SF2.cxf,actgen_cxf"
 STATE="utd"
-TIME="1689665314"
+TIME="1689672104"
 SIZE="1787"
 ENDFILE
 VALUE "<project>\component\work\SF2_sb\CCC_0\SF2_sb_CCC_0_FCCC.cxf,actgen_cxf"
@@ -731,6 +731,11 @@ STATE="utd"
 TIME="1688979230"
 SIZE="877"
 ENDFILE
+VALUE "<project>\hdl\FSM.v,hdl"
+STATE="utd"
+TIME="1689671957"
+SIZE="2477"
+ENDFILE
 VALUE "<project>\hdl\inc.v,hdl"
 STATE="utd"
 TIME="1686666970"
@@ -743,8 +748,8 @@ SIZE="2044"
 ENDFILE
 VALUE "<project>\hdl\NAND_controller.v,hdl"
 STATE="utd"
-TIME="1689665141"
-SIZE="3661"
+TIME="1689669259"
+SIZE="3774"
 ENDFILE
 VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
 STATE="utd"
@@ -875,12 +880,6 @@ ENDUsed_File_List
 ENDLIST
 ENDLIST
 ENDLIST
-LIST "SF2::work"
-FILE "<project>\component\work\SF2\SF2.cxf,actgen_cxf"
-LIST Other_Association
-VALUE "<project>\simulation\subsystem.bfm,sim"
-ENDLIST
-ENDLIST
 LIST "SF2_sb_MSS::work"
 FILE "<project>\component\work\SF2_sb_MSS\SF2_sb_MSS.v,hdl"
 LIST Other_Association
@@ -912,9 +911,6 @@ VALUE "<project>\stimulus\controller_tb.v,tb_hdl"
 ENDLIST
 ENDLIST
 LIST Other_Association
-LIST SF2
-VALUE "<project>\simulation\subsystem.bfm,sim"
-ENDLIST
 LIST CoreAPB3
 VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
 VALUE "<project>\simulation\coreapb3_usertb_master.bfm,sim"
@@ -1090,6 +1086,7 @@ SmartDesign;SF2;0
 HDL;component\work\CoreUARTapb_C0\CoreUARTapb_C0.v;0
 HDL;hdl\NAND_controller.v;0
 HDL;hdl\FIFO.v;0
+HDL;hdl\FSM.v;0
 StartPage;StartPage;0
 ACTIVEVIEW;SF2
 ENDLIST
@@ -1165,6 +1162,8 @@ ENDLIST
 LIST "MSS_010::work","component\work\SF2_sb_MSS\SF2_sb_MSS_syn.v","FALSE","FALSE"
 ENDLIST
 LIST "fifo::work","hdl\FIFO.v","FALSE","FALSE"
+ENDLIST
+LIST "fsm::work","hdl\FSM.v","FALSE","FALSE"
 ENDLIST
 LIST "MT29F8G08ABACAWP::work","hdl\nand.v","FALSE","FALSE"
 ENDLIST

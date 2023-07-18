@@ -33,7 +33,7 @@ module NAND_controller(
     PREADY_S0,
     PSLVERR_S0,
     
-    /* Controller Outputs  */
+    /* Controller Outputs to Flash  */
     F_nCE, 
     F_CLE, 
     F_ALE, 
@@ -46,6 +46,7 @@ module NAND_controller(
 //--------------------------------------------------------------------
 // Input
 //--------------------------------------------------------------------
+/* APB Input */
 input  [4:0] PADDR;
 input        PCLK;
 input        PENABLE;
@@ -53,20 +54,23 @@ input        PRESETN;
 input        PSEL;
 input  [7:0] PWDATA;
 input        PWRITE;
+/* Flash Input */
 input        F_nRB; 
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
+/* APB Output */
 output [7:0] PRDATA;
 output       PREADY_S0;
 output       PSLVERR_S0;
-output       F_nCE; 
-output       F_CLE; 
-output       F_ALE; 
-output       F_nWE; 
-output       F_nRE; 
-output       F_nWP;
-output [7:0] F_DIO;
+/* Controller Output */
+output      F_nCE; 
+output      F_CLE; 
+output      F_ALE; 
+output      F_nWE; 
+output      F_nRE; 
+output      F_nWP;
+output      F_DIO;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
@@ -86,6 +90,7 @@ wire            C_tx_ready;
 wire            C_rx_ready;
 
 /* Control registers and Status register  */
+reg     [7:0]   F_DIO;
 reg     [15:0]  C_Cmd;
 reg     [39:0]  C_Addr;
 reg     [7:0]   C_Length;
