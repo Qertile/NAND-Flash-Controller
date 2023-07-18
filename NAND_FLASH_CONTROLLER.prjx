@@ -743,8 +743,8 @@ SIZE="2044"
 ENDFILE
 VALUE "<project>\hdl\NAND_controller.v,hdl"
 STATE="utd"
-TIME="1689057139"
-SIZE="3184"
+TIME="1689663723"
+SIZE="3221"
 ENDFILE
 VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
 STATE="utd"
@@ -1076,7 +1076,13 @@ ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
 StartPage;StartPage;0
-ACTIVEVIEW;StartPage
+SmartDesign;SF2;0
+HDL;component\work\CoreUARTapb_C0\CoreUARTapb_C0.v;0
+HDL;hdl\NAND_controller.v;0
+HDL;hdl\FIFO.v;0
+Reports;Reports;0
+ReportsCurrentItem;Generate Memory Map:SF2_DataSheet.xml
+ACTIVEVIEW;SF2
 ENDLIST
 LIST ModuleSubBlockList
 LIST "CoreAPB3_C0::work","component\work\CoreAPB3_C0\CoreAPB3_C0.v","TRUE","FALSE"

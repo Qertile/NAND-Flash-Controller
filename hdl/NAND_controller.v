@@ -33,13 +33,13 @@ module NAND_controller(
     PREADY_S0,
     PSLVERR_S0,
     /* Controller Outputs  */
-    nCE, 
-    CLE, 
-    ALE, 
-    nWE, 
-    nRE, 
-    nWP,
-    FLASH_IO
+    F_nCE, 
+    F_CLE, 
+    F_ALE, 
+    F_nWE, 
+    F_nRE, 
+    F_nWP,
+    F_IO
 );
 //--------------------------------------------------------------------
 // Input
@@ -51,65 +51,78 @@ input        PRESETN;
 input        PSEL;
 input  [7:0] PWDATA;
 input        PWRITE;
+output       F_nRB; 
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
 output [7:0] PRDATA;
 output       PREADY_S0;
 output       PSLVERR_S0;
-output       nCE; 
-output       CLE; 
-output       ALE; 
-output       nWE; 
-output       nRE; 
-output       nWP;
-output [7:0] FLASH_IO;
+output       F_nCE; 
+output       F_CLE; 
+output       F_ALE; 
+output       F_nWE; 
+output       F_nRE; 
+output       F_nWP;
+output [7:0] F_IO;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
 wire   [4:0] PADDR;
 wire         PENABLE;
-wire   [7:0] APB_bif_PRDATA;
-wire         APB_bif_PREADY;
 wire         PSEL;
-wire         APB_bif_PSLVERR;
 wire   [7:0] PWDATA;
 wire         PWRITE;
 wire         PCLK;
 wire         PRESETN;
-wire   [7:0] APB_bif_PRDATA_net_0;
-wire         APB_bif_PREADY_net_0;
-wire         APB_bif_PSLVERR_net_0;
 
-wire         wr_enable;
-wire         rd_enable;
+wire    [7:0]   C_tx_data;
+wire    [7:0]   C_rx_data;
+wire            C_wr_enable;
+wire            C_rd_enable;
+wire            C_tx_ready;
+wire            C_rx_ready;
 
 /* Control registers and Status register  */
-reg     [15:0]  Cmd;
-reg     [39:0]  Addr;
-reg     [7:0]   Length;
-reg     [7:0]   Status;
+reg     [15:0]  C_Cmd;
+reg     [39:0]  C_Addr;
+reg     [7:0]   C_Length;
+reg     [7:0]   C_Status;
 
 //<statements>
-assign wr_enable = (PENABLE && PWRITE && PSEL);
-assign rd_enable = (!PWRITE && PSEL);
+assign C_wr_enable = (PENABLE && PWRITE && PSEL);
+assign C_rd_enable = (!PWRITE && PSEL);
+assign PREADY = (C_tx_ready && C_rx_ready && F_nRB);
 
-fifo TX_FIFO;(
+/* ========== FIFO ========== */
+fifo TX_FIFO(
     // Input
     .clk(PCLK)
     .reset(PRESETN)
-    .din
-    .write_en
-    .read_en
+    .din(PWDATA)
+    .write_en(C_wr_enable)
+    .read_en()
 
     // Output
-    .dout
-    .full
-    .empty
-)
+    .dout(C_tx_data)
+    .full(C_tx_ready)
+    .empty()
+);
 
+fifo RX_FIFO(
+    // Input
+    .clk(PCLK)
+    .reset(PRESETN)
+    .din(C_rx_data)
+    .write_en()
+    .read_en(C_rd_enable)
 
-fifo RX_FIFO;
+    // Output
+    .dout(PRDATA)
+    .full(C_rx_ready)
+    .empty()
+);
+/* ========== FIFO ========== */
 
 /* ----- FSM ----- 
 
