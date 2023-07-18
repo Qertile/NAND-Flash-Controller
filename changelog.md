@@ -24,6 +24,7 @@ The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 ### New
 1. add prefix `F_` for flash variables
 2. add prefix `C_` for controller variables
+3. create input `F_nRB`
 ### Changed
 ### Removed
 ### Deprecated

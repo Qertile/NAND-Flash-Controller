@@ -32,6 +32,7 @@ module NAND_controller(
     PRDATA,
     PREADY_S0,
     PSLVERR_S0,
+    
     /* Controller Outputs  */
     F_nCE, 
     F_CLE, 
@@ -39,7 +40,8 @@ module NAND_controller(
     F_nWE, 
     F_nRE, 
     F_nWP,
-    F_IO
+    F_nRB,
+    F_DIO
 );
 //--------------------------------------------------------------------
 // Input
@@ -51,7 +53,7 @@ input        PRESETN;
 input        PSEL;
 input  [7:0] PWDATA;
 input        PWRITE;
-output       F_nRB; 
+input        F_nRB; 
 //--------------------------------------------------------------------
 // Output
 //--------------------------------------------------------------------
@@ -64,7 +66,7 @@ output       F_ALE;
 output       F_nWE; 
 output       F_nRE; 
 output       F_nWP;
-output [7:0] F_IO;
+output [7:0] F_DIO;
 //--------------------------------------------------------------------
 // Nets
 //--------------------------------------------------------------------
@@ -97,29 +99,29 @@ assign PREADY = (C_tx_ready && C_rx_ready && F_nRB);
 /* ========== FIFO ========== */
 fifo TX_FIFO(
     // Input
-    .clk(PCLK)
-    .reset(PRESETN)
-    .din(PWDATA)
-    .write_en(C_wr_enable)
-    .read_en()
+    .clk(PCLK),
+    .reset(PRESETN),
+    .din(PWDATA),
+    .write_en(C_wr_enable),
+    .read_en(),
 
     // Output
-    .dout(C_tx_data)
-    .full(C_tx_ready)
+    .dout(C_tx_data),
+    .full(C_tx_ready),
     .empty()
 );
 
 fifo RX_FIFO(
     // Input
-    .clk(PCLK)
-    .reset(PRESETN)
-    .din(C_rx_data)
-    .write_en()
-    .read_en(C_rd_enable)
+    .clk(PCLK),
+    .reset(PRESETN),
+    .din(C_rx_data),
+    .write_en(),
+    .read_en(C_rd_enable),
 
     // Output
-    .dout(PRDATA)
-    .full(C_rx_ready)
+    .dout(PRDATA),
+    .full(C_rx_ready),
     .empty()
 );
 /* ========== FIFO ========== */

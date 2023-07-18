@@ -81,31 +81,35 @@
         <spirit:direction>out</spirit:direction>
       </spirit:signal>
       <spirit:signal>
-        <spirit:name>nCE</spirit:name>
+        <spirit:name>F_nCE</spirit:name>
         <spirit:direction>out</spirit:direction>
       </spirit:signal>
       <spirit:signal>
-        <spirit:name>CLE</spirit:name>
+        <spirit:name>F_CLE</spirit:name>
         <spirit:direction>out</spirit:direction>
       </spirit:signal>
       <spirit:signal>
-        <spirit:name>ALE</spirit:name>
+        <spirit:name>F_ALE</spirit:name>
         <spirit:direction>out</spirit:direction>
       </spirit:signal>
       <spirit:signal>
-        <spirit:name>nWE</spirit:name>
+        <spirit:name>F_nWE</spirit:name>
         <spirit:direction>out</spirit:direction>
       </spirit:signal>
       <spirit:signal>
-        <spirit:name>nRE</spirit:name>
+        <spirit:name>F_nRE</spirit:name>
         <spirit:direction>out</spirit:direction>
       </spirit:signal>
       <spirit:signal>
-        <spirit:name>nWP</spirit:name>
+        <spirit:name>F_nWP</spirit:name>
         <spirit:direction>out</spirit:direction>
       </spirit:signal>
       <spirit:signal>
-        <spirit:name>IO</spirit:name>
+        <spirit:name>F_nRB</spirit:name>
+        <spirit:direction>in</spirit:direction>
+      </spirit:signal>
+      <spirit:signal>
+        <spirit:name>F_DIO</spirit:name>
         <spirit:direction>out</spirit:direction>
         <spirit:left>7</spirit:left>
         <spirit:right>0</spirit:right>

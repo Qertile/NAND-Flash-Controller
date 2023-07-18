@@ -649,7 +649,7 @@ SIZE="1695"
 ENDFILE
 VALUE "<project>\component\work\SF2\SF2.cxf,actgen_cxf"
 STATE="utd"
-TIME="1688979210"
+TIME="1689665314"
 SIZE="1787"
 ENDFILE
 VALUE "<project>\component\work\SF2_sb\CCC_0\SF2_sb_CCC_0_FCCC.cxf,actgen_cxf"
@@ -743,8 +743,8 @@ SIZE="2044"
 ENDFILE
 VALUE "<project>\hdl\NAND_controller.v,hdl"
 STATE="utd"
-TIME="1689663723"
-SIZE="3221"
+TIME="1689665141"
+SIZE="3661"
 ENDFILE
 VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
 STATE="utd"
@@ -875,6 +875,12 @@ ENDUsed_File_List
 ENDLIST
 ENDLIST
 ENDLIST
+LIST "SF2::work"
+FILE "<project>\component\work\SF2\SF2.cxf,actgen_cxf"
+LIST Other_Association
+VALUE "<project>\simulation\subsystem.bfm,sim"
+ENDLIST
+ENDLIST
 LIST "SF2_sb_MSS::work"
 FILE "<project>\component\work\SF2_sb_MSS\SF2_sb_MSS.v,hdl"
 LIST Other_Association
@@ -906,6 +912,9 @@ VALUE "<project>\stimulus\controller_tb.v,tb_hdl"
 ENDLIST
 ENDLIST
 LIST Other_Association
+LIST SF2
+VALUE "<project>\simulation\subsystem.bfm,sim"
+ENDLIST
 LIST CoreAPB3
 VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
 VALUE "<project>\simulation\coreapb3_usertb_master.bfm,sim"
@@ -1075,13 +1084,13 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-StartPage;StartPage;0
+Reports;Reports;0
+ReportsCurrentItem;Generate Memory Map:SF2_DataSheet.xml
 SmartDesign;SF2;0
 HDL;component\work\CoreUARTapb_C0\CoreUARTapb_C0.v;0
 HDL;hdl\NAND_controller.v;0
 HDL;hdl\FIFO.v;0
-Reports;Reports;0
-ReportsCurrentItem;Generate Memory Map:SF2_DataSheet.xml
+StartPage;StartPage;0
 ACTIVEVIEW;SF2
 ENDLIST
 LIST ModuleSubBlockList
@@ -1130,6 +1139,14 @@ SUBBLOCK "CoreUARTapb_C0_CoreUARTapb_C0_0_ram128x8_pa4::work","component\work\Co
 ENDLIST
 LIST "CoreUARTapb_C0_CoreUARTapb_C0_0_ram128x8_pa4::work","component\work\CoreUARTapb_C0\CoreUARTapb_C0_0\rtl\vlog\core_obfuscated\fifo_256x8_g4.v","FALSE","FALSE"
 ENDLIST
+LIST "DESIGN_FIRMWARE::work","component\work\DESIGN_FIRMWARE\DESIGN_FIRMWARE.cxf","TRUE","FALSE"
+SUBBLOCK "SmartFusion2_CMSIS::work","","FALSE","FALSE"
+SUBBLOCK "SmartFusion2_MSS_HPDMA_Driver::work","","FALSE","FALSE"
+SUBBLOCK "SmartFusion2_MSS_NVM_Driver::work","","FALSE","FALSE"
+SUBBLOCK "SmartFusion2_MSS_RTC_Driver::work","","FALSE","FALSE"
+SUBBLOCK "SmartFusion2_MSS_System_Services_Driver::work","","FALSE","FALSE"
+SUBBLOCK "SmartFusion2_MSS_Timer_Driver::work","","FALSE","FALSE"
+ENDLIST
 LIST "COREFIFO_C0_COREFIFO_C0_0_corefifo_sync_scntr::work","component\work\COREFIFO_C0\COREFIFO_C0_0\rtl\vlog\core\corefifo_sync_scntr.v","FALSE","FALSE"
 ENDLIST
 LIST "CoreResetP::work","component\Actel\DirectCore\CoreResetP\7.1.100\rtl\vlog\core\coreresetp.v","FALSE","FALSE"
@@ -1151,7 +1168,8 @@ LIST "fifo::work","hdl\FIFO.v","FALSE","FALSE"
 ENDLIST
 LIST "MT29F8G08ABACAWP::work","hdl\nand.v","FALSE","FALSE"
 ENDLIST
-LIST "NAND_controller::work","","FALSE","FALSE"
+LIST "NAND_controller::work","hdl\NAND_controller.v","FALSE","FALSE"
+SUBBLOCK "fifo::work","hdl\FIFO.v","FALSE","FALSE"
 ENDLIST
 LIST "RCOSC_1MHZ::work","component\Actel\SgCore\OSC\2.0.101\osc_comps.v","FALSE","FALSE"
 ENDLIST
@@ -1164,7 +1182,7 @@ ENDLIST
 LIST "SF2::work","component\work\SF2\SF2.cxf","TRUE","FALSE"
 SUBBLOCK "CoreAPB3_C0::work","component\work\CoreAPB3_C0\CoreAPB3_C0.v","TRUE","FALSE"
 SUBBLOCK "SF2_sb::work","component\work\SF2_sb\SF2_sb.v","TRUE","FALSE"
-SUBBLOCK "NAND_controller::work","","FALSE","FALSE"
+SUBBLOCK "NAND_controller::work","hdl\NAND_controller.v","FALSE","FALSE"
 ENDLIST
 LIST "SF2_sb::work","component\work\SF2_sb\SF2_sb.v","TRUE","FALSE"
 SUBBLOCK "SF2_sb_CCC_0_FCCC::work","component\work\SF2_sb\CCC_0\SF2_sb_CCC_0_FCCC.v","FALSE","FALSE"
@@ -1180,6 +1198,18 @@ SUBBLOCK "RCOSC_25_50MHZ::work","component\Actel\SgCore\OSC\2.0.101\osc_comps.v"
 ENDLIST
 LIST "SF2_sb_MSS::work","component\work\SF2_sb_MSS\SF2_sb_MSS.v","TRUE","FALSE"
 SUBBLOCK "MSS_010::work","component\work\SF2_sb_MSS\SF2_sb_MSS_syn.v","FALSE","FALSE"
+ENDLIST
+LIST "SmartFusion2_CMSIS::work","","FALSE","FALSE"
+ENDLIST
+LIST "SmartFusion2_MSS_HPDMA_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "SmartFusion2_MSS_NVM_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "SmartFusion2_MSS_RTC_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "SmartFusion2_MSS_System_Services_Driver::work","","FALSE","FALSE"
+ENDLIST
+LIST "SmartFusion2_MSS_Timer_Driver::work","","FALSE","FALSE"
 ENDLIST
 LIST "XTLOSC::work","component\Actel\SgCore\OSC\2.0.101\osc_comps.v","FALSE","FALSE"
 ENDLIST
