@@ -22,6 +22,7 @@ The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 -----------------------------------
 ## Unreleased v0.1.6 (2023.07.##)
 ### New
+1. create task `reset_cycle`
 ### Changed
 ### Removed
 ### Deprecated
@@ -34,9 +35,9 @@ The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 ## Unreleased v0.1.5 (2023.07.19)
 ### New
 1. create FSM.v
-2. create dataout_cycle
+2. create `dataout_cycle`
 ### Changed
-1. rename data_cycle to datain_cycle
+1. rename `data_cycle` to `datain_cycle`
 
 
 -----------------------------------

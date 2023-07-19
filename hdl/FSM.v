@@ -48,6 +48,7 @@ wire    [39:0]  C_Addr;
 wire    [7:0]   C_Length;
 wire    [7:0]   C_Status;
 
+/* Controller output */
 reg F_nCE;
 reg F_CLE;
 reg F_ALE;
@@ -56,6 +57,13 @@ reg F_nRE;
 reg F_nWP;
 reg [7:0] F_DIO;
 
+
+/* Internal signals */
+reg state;
+reg next_state;
+
+
+parameter   STATE_REST  = 3'b111;
 parameter   STATE_IDLE  = 3'b000;
 parameter   STATE_READ  = 3'b001;
 parameter   STATE_WRIT  = 3'b010;
@@ -63,50 +71,56 @@ parameter   STATE_ERAS  = 3'b011;
 parameter   STATE_RX    = 3'b100;
 
 
-/*
+
 always @(posedge PCLK or negedge PRESETN) begin
     if (!PRESETN) begin
-    state <= STATE_IDLE;
+        state <= STATE_REST;
     end 
     else begin
-    state <= next_state;
+        state <= STATE_IDLE;
     end
 end
 always @(*) begin
     case (state)
+    STATE_REST: begin
+        if (C_Cmd == 1) begin
+            next_state <= 2'b01;
+        end 
+        else begin
+        next_state <= STATE_IDLE;
+    end
     STATE_IDLE: begin
-        if (input == 1) begin
-        next_state <= 2'b01;
-        end else begin
-        next_state <= 2'b00;
-        end
+        next_state <= STATE_IDLE;
     end
     STATE_READ: begin
-        if (input == 1) begin
-        next_state <= 2'b01;
-        end else begin
-        next_state <= 2'b00;
+        if (C_Cmd == 1) begin
+            next_state <= 2'b01;
+        end 
+        else begin
+            next_state <= 2'b00;
         end
     end
     STATE_WRIT: begin
-        if (input == 1) begin
-        next_state <= 2'b01;
-        end else begin
-        next_state <= 2'b00;
+        if (C_Cmd == 1) begin
+            next_state <= 2'b01;
+        end 
+        else begin
+            next_state <= 2'b00;
         end
     end
     STATE_ERAS: begin
-        if (input == 1) begin
-        next_state <= 2'b01;
+        if (C_Cmd == 1) begin
+            next_state <= 2'b01;
         end else begin
-        next_state <= 2'b00;
+            next_state <= 2'b00;
         end
     end
     STATE_RX: begin
-        if (input == 1) begin
-        next_state <= 2'b01;
-        end else begin
-        next_state <= 2'b00;
+        if (C_Cmd == 1) begin
+            next_state <= 2'b01;
+        end 
+        else begin
+            next_state <= 2'b00;
         end
     end
     default: begin
@@ -114,7 +128,9 @@ always @(*) begin
     end
     endcase
 end
-*/
+
+/* ----- Tasks of cycles ----- */
+
 task command_cycle;
     input [7:0] cmd;
     begin: command_cycle
@@ -171,6 +187,24 @@ task datain_cycle;
 endtask
 
 task dataout_cycle;
+    output [7:0] data;
+    if (F_nRB) begin
+        
+        begin: dataout_cycle
+
+            F_nCE = (`LOW);
+            F_nRE = (`LOW);
+            // buff <= data;
+            
+            # (`T_RP) // # 10
+            F_nWE = ~F_nWE;
+
+            # (`T_REH); // # 7
+        end
+    end
+endtask
+
+task reset_cycle;
     output [7:0] data;
     if (F_nRB) begin
         
