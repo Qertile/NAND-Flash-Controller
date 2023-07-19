@@ -20,7 +20,26 @@ The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 - [ ] FSM
 
 -----------------------------------
-## Unreleased v0.1.6 (2023.07.##)
+## Unreleased v0.1.8 (2023.07.##)
+### New
+### Changed
+### Removed
+### Deprecated
+### Fixed
+### Known Issues
+### Notes
+### Reference
+
+-----------------------------------
+## NFC v0.1.7 (2023.07.19)
+### New
+1. create array `i_cmd` and `i_addr`
+2. create reg `icmd_ptr` and `iaddr_ptr`
+3. implement moving cmd and addr from port into array
+
+
+-----------------------------------
+## NFC v0.1.6 (2023.07.19)
 ### New
 1. create task `idle_cycle`
 2. implement `STATE_RST` and `STATE_IDLE`
@@ -28,12 +47,7 @@ The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 1. rename `STATE_REST` to `STATE_RSET`
 2. rename `reset_cycle` to `idle_cycle`
 3. add a prefix `i_` to `state` and `next_state`
-### Removed
-### Deprecated
-### Fixed
-### Known Issues
-### Notes
-### Reference
+
 
 -----------------------------------
 ## Unreleased v0.1.5 (2023.07.19)

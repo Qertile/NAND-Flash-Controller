@@ -58,13 +58,13 @@ reg F_nWP;
 reg [7:0] F_DIO;
 
 
-/* Internal signals and buffer */
+/* Internal signals and array */
 reg         i_state;
 reg         i_next_state;
 reg [7:0]   i_cmd  [1:0];
 reg [7:0]   i_addr [4:0];
-reg         i_cmd_ptr;
-reg         i_addr_ptr [2:0];
+reg         icmd_ptr;
+reg [2:0]   iaddr_ptr ;
 
 
 /* Custom define states for state machine */
@@ -79,10 +79,25 @@ parameter   STATE_RX    = 3'b100;
 
 always @(posedge PCLK or negedge PRESETN) begin
     if (!PRESETN) begin
+        /* reset NAND flash */
         i_state <= STATE_RSET;
+        /* reset command buffer */
+        icmd_ptr <= 0;
+        iaddr_ptr <= 0;
     end 
     else begin
         i_state <= STATE_IDLE;
+    end
+    if(C_Cmd)begin
+        i_cmd[icmd_ptr] <= C_Cmd;
+        icmd_ptr = ~icmd_ptr;
+    end
+    if(C_Addr)begin
+        i_addr[iaddr_ptr] <= C_Addr;
+        iaddr_ptr = iaddr_ptr+1;
+        if (iaddr_ptr == 3'd5) begin
+            iaddr_ptr <= 0;
+        end
     end
 end
 always @(*) begin
