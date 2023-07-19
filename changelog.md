@@ -20,9 +20,8 @@ The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 - [ ] FSM
 
 -----------------------------------
-## Unreleased v0.1.5 (2023.07.##)
+## Unreleased v0.1.6 (2023.07.##)
 ### New
-- create FSM.v
 ### Changed
 ### Removed
 ### Deprecated
@@ -30,6 +29,15 @@ The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 ### Known Issues
 ### Notes
 ### Reference
+
+-----------------------------------
+## Unreleased v0.1.5 (2023.07.19)
+### New
+1. create FSM.v
+2. create dataout_cycle
+### Changed
+1. rename data_cycle to datain_cycle
+
 
 -----------------------------------
 ## NFC v0.1.4 (2023.07.18)

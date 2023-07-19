@@ -733,8 +733,8 @@ SIZE="877"
 ENDFILE
 VALUE "<project>\hdl\FSM.v,hdl"
 STATE="utd"
-TIME="1689671957"
-SIZE="2477"
+TIME="1689746519"
+SIZE="3544"
 ENDFILE
 VALUE "<project>\hdl\inc.v,hdl"
 STATE="utd"
@@ -880,6 +880,12 @@ ENDUsed_File_List
 ENDLIST
 ENDLIST
 ENDLIST
+LIST "SF2::work"
+FILE "<project>\component\work\SF2\SF2.cxf,actgen_cxf"
+LIST Other_Association
+VALUE "<project>\simulation\subsystem.bfm,sim"
+ENDLIST
+ENDLIST
 LIST "SF2_sb_MSS::work"
 FILE "<project>\component\work\SF2_sb_MSS\SF2_sb_MSS.v,hdl"
 LIST Other_Association
@@ -911,6 +917,9 @@ VALUE "<project>\stimulus\controller_tb.v,tb_hdl"
 ENDLIST
 ENDLIST
 LIST Other_Association
+LIST SF2
+VALUE "<project>\simulation\subsystem.bfm,sim"
+ENDLIST
 LIST CoreAPB3
 VALUE "<project>\simulation\bfmtovec_compile.tcl,sim"
 VALUE "<project>\simulation\coreapb3_usertb_master.bfm,sim"
@@ -1088,7 +1097,7 @@ HDL;hdl\NAND_controller.v;0
 HDL;hdl\FIFO.v;0
 HDL;hdl\FSM.v;0
 StartPage;StartPage;0
-ACTIVEVIEW;SF2
+ACTIVEVIEW;hdl\FSM.v
 ENDLIST
 LIST ModuleSubBlockList
 LIST "CoreAPB3_C0::work","component\work\CoreAPB3_C0\CoreAPB3_C0.v","TRUE","FALSE"

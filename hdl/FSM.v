@@ -2,6 +2,7 @@
 module fsm (
     /* APB Inputs */
     PCLK,
+    PRESETN,
 
     /* Controller Inputs */
     C_Cmd,
@@ -22,6 +23,7 @@ module fsm (
 
 /* APB Inputs */
 input       PCLK;
+input       PRESETN;
 
 /* Controller Inputs */
 input       C_Cmd;
@@ -54,24 +56,53 @@ reg F_nRE;
 reg F_nWP;
 reg [7:0] F_DIO;
 
+parameter   STATE_IDLE  = 3'b000;
+parameter   STATE_READ  = 3'b001;
+parameter   STATE_WRIT  = 3'b010;
+parameter   STATE_ERAS  = 3'b011;
+parameter   STATE_RX    = 3'b100;
+
+
 /*
-always @(posedge clk or posedge reset) begin
-    if (reset) begin
-    state <= 2'b00;
-    end else begin
+always @(posedge PCLK or negedge PRESETN) begin
+    if (!PRESETN) begin
+    state <= STATE_IDLE;
+    end 
+    else begin
     state <= next_state;
     end
 end
 always @(*) begin
     case (state)
-    2'b00: begin
+    STATE_IDLE: begin
         if (input == 1) begin
         next_state <= 2'b01;
         end else begin
         next_state <= 2'b00;
         end
     end
-    2'b01: begin
+    STATE_READ: begin
+        if (input == 1) begin
+        next_state <= 2'b01;
+        end else begin
+        next_state <= 2'b00;
+        end
+    end
+    STATE_WRIT: begin
+        if (input == 1) begin
+        next_state <= 2'b01;
+        end else begin
+        next_state <= 2'b00;
+        end
+    end
+    STATE_ERAS: begin
+        if (input == 1) begin
+        next_state <= 2'b01;
+        end else begin
+        next_state <= 2'b00;
+        end
+    end
+    STATE_RX: begin
         if (input == 1) begin
         next_state <= 2'b01;
         end else begin
@@ -79,7 +110,7 @@ always @(*) begin
         end
     end
     default: begin
-        next_state <= 2'b00;
+        next_state <= STATE_IDLE;
     end
     endcase
 end
@@ -122,9 +153,9 @@ task address_cycle;
     end
 endtask
 
-task data_cycle;
+task datain_cycle;
     input [7:0] data;
-    begin: data_cycle
+    begin: datain_cycle
 
         F_CLE = (`LOW);
         F_nCE = (`LOW);
@@ -136,6 +167,24 @@ task data_cycle;
         F_nWE = ~F_nWE;
 
         # (`T_WH); // # 7
+    end
+endtask
+
+task dataout_cycle;
+    output [7:0] data;
+    if (F_nRB) begin
+        
+        begin: dataout_cycle
+
+            F_nCE = (`LOW);
+            F_nRE = (`LOW);
+            // buff <= data;
+            
+            # (`T_RP) // # 10
+            F_nWE = ~F_nWE;
+
+            # (`T_REH); // # 7
+        end
     end
 endtask
 endmodule
