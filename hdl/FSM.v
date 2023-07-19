@@ -43,8 +43,8 @@ output       F_DIO;
 
 
 /* Control registers and Status register  */
-wire    [15:0]  C_Cmd;
-wire    [39:0]  C_Addr;
+wire    [7:0]   C_Cmd;
+wire    [7:0]   C_Addr;
 wire    [7:0]   C_Length;
 wire    [7:0]   C_Status;
 
@@ -58,12 +58,17 @@ reg F_nWP;
 reg [7:0] F_DIO;
 
 
-/* Internal signals */
-reg state;
-reg next_state;
+/* Internal signals and buffer */
+reg         i_state;
+reg         i_next_state;
+reg [7:0]   i_cmd  [1:0];
+reg [7:0]   i_addr [4:0];
+reg         i_cmd_ptr;
+reg         i_addr_ptr [2:0];
 
 
-parameter   STATE_REST  = 3'b111;
+/* Custom define states for state machine */
+parameter   STATE_RSET  = 3'b111;
 parameter   STATE_IDLE  = 3'b000;
 parameter   STATE_READ  = 3'b001;
 parameter   STATE_WRIT  = 3'b010;
@@ -74,57 +79,61 @@ parameter   STATE_RX    = 3'b100;
 
 always @(posedge PCLK or negedge PRESETN) begin
     if (!PRESETN) begin
-        state <= STATE_REST;
+        i_state <= STATE_RSET;
     end 
     else begin
-        state <= STATE_IDLE;
+        i_state <= STATE_IDLE;
     end
 end
 always @(*) begin
-    case (state)
-    STATE_REST: begin
-        if (C_Cmd == 1) begin
-            next_state <= 2'b01;
+    case (i_state)
+    STATE_RSET: begin
+        if (!PRESETN) begin
+            command_cycle(8'hFF);
+            i_next_state <= STATE_IDLE;
         end 
         else begin
-        next_state <= STATE_IDLE;
+        i_next_state <= STATE_IDLE;
+        end
     end
     STATE_IDLE: begin
-        next_state <= STATE_IDLE;
+        idle_cycle();
+        i_next_state <= STATE_IDLE;
     end
-    STATE_READ: begin
-        if (C_Cmd == 1) begin
-            next_state <= 2'b01;
-        end 
-        else begin
-            next_state <= 2'b00;
-        end
-    end
-    STATE_WRIT: begin
-        if (C_Cmd == 1) begin
-            next_state <= 2'b01;
-        end 
-        else begin
-            next_state <= 2'b00;
-        end
-    end
-    STATE_ERAS: begin
-        if (C_Cmd == 1) begin
-            next_state <= 2'b01;
-        end else begin
-            next_state <= 2'b00;
-        end
-    end
-    STATE_RX: begin
-        if (C_Cmd == 1) begin
-            next_state <= 2'b01;
-        end 
-        else begin
-            next_state <= 2'b00;
-        end
-    end
+    // STATE_READ: begin
+    //     if (C_Cmd == 1) begin
+    //         i_next_state <= 2'b01;
+    //     end 
+    //     else begin
+    //         i_next_state <= 2'b00;
+    //     end
+    // end
+    // STATE_WRIT: begin
+    //     if (C_Cmd == 1) begin
+    //         i_next_state <= 2'b01;
+    //     end 
+    //     else begin
+    //         i_next_state <= 2'b00;
+    //     end
+    // end
+    // STATE_ERAS: begin
+    //     if (C_Cmd == 1) begin
+    //         i_next_state <= 2'b01;
+    //     end else begin
+    //         i_next_state <= 2'b00;
+    //     end
+    // end
+    // STATE_RX: begin
+    //     if (C_Cmd == 1) begin
+    //         i_next_state <= 2'b01;
+    //     end 
+    //     else begin
+    //         i_next_state <= 2'b00;
+    //     end
+    // end
     default: begin
-        next_state <= STATE_IDLE;
+        idle_cycle();
+        i_next_state <= STATE_IDLE;
     end
     endcase
 end
@@ -204,21 +213,10 @@ task dataout_cycle;
     end
 endtask
 
-task reset_cycle;
-    output [7:0] data;
-    if (F_nRB) begin
-        
-        begin: dataout_cycle
+task idle_cycle;        
+    begin: idle_cycle
 
-            F_nCE = (`LOW);
-            F_nRE = (`LOW);
-            // buff <= data;
-            
-            # (`T_RP) // # 10
-            F_nWE = ~F_nWE;
-
-            # (`T_REH); // # 7
-        end
+        F_nCE = (`HIGH);
     end
 endtask
 endmodule
