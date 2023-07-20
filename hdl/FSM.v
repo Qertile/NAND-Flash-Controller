@@ -128,7 +128,7 @@ always @(*) begin
             # (`T_R + `T_RR) // # 25
             
             for (i = 0; i<C_Length; i=1+1) begin
-                dataout_cycle();
+                wrdata_cycle();
             end
             i_next_state <= STATE_IDLE;
         end 
@@ -146,7 +146,7 @@ always @(*) begin
             # (`T_ADL) // # 70
             
             for (i = 0; i<C_Length; i=1+1) begin
-                datain_cycle();
+                rddata_cycle();
             end
 
             command_cycle (i_cmd[i]);
@@ -214,9 +214,9 @@ task address_cycle;
     end
 endtask
 
-task datain_cycle;
-    input [7:0] data;
-    begin: datain_cycle
+task rddata_cycle;
+    // input [7:0] data;
+    begin: rddata_cycle
 
         F_CLE = (`LOW);
         F_nCE = (`LOW);
@@ -231,10 +231,10 @@ task datain_cycle;
     end
 endtask
 
-task dataout_cycle;
+task wrdata_cycle;
     if (F_nRB) begin
         
-        begin: dataout_cycle
+        begin: wrdata_cycle
 
             F_nCE = (`LOW);
             F_nRE = (`LOW);

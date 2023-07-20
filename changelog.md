@@ -23,6 +23,8 @@ The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 ## Unreleased v0.1.9 (2023.07.##)
 ### New
 ### Changed
+1. rename datain_cycle to rddata_cycle
+2. rename dataout_cycle to wrdata_cycle
 ### Removed
 ### Deprecated
 ### Fixed
