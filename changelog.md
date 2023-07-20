@@ -22,6 +22,7 @@ The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 -----------------------------------
 ## Unreleased v0.1.8 (2023.07.##)
 ### New
+1. implement `STATE_READ`
 ### Changed
 ### Removed
 ### Deprecated

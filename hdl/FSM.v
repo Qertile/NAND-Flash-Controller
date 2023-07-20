@@ -59,8 +59,8 @@ reg [7:0] F_DIO;
 
 
 /* Internal signals and array */
-reg         i_state;
-reg         i_next_state;
+reg [2:0]   i_state;
+reg [2:0]   i_next_state;
 reg [7:0]   i_cmd  [1:0];
 reg [7:0]   i_addr [4:0];
 reg         icmd_ptr;
@@ -108,21 +108,34 @@ always @(*) begin
             i_next_state <= STATE_IDLE;
         end 
         else begin
-        i_next_state <= STATE_IDLE;
+            i_next_state <= STATE_IDLE;
         end
     end
     STATE_IDLE: begin
         idle_cycle();
         i_next_state <= STATE_IDLE;
     end
-    // STATE_READ: begin
-    //     if (C_Cmd == 1) begin
-    //         i_next_state <= 2'b01;
-    //     end 
-    //     else begin
-    //         i_next_state <= 2'b00;
-    //     end
-    // end
+    STATE_READ: begin
+        integer i;
+        if (i_cmd[0] == 8'h00 && i_cmd[1] == 8'h30) begin
+            command_cycle (i_cmd[0]);
+
+            for (i = 0; i<5; i=1+1) begin
+                command_cycle (i_cmd[1]);
+            end
+            command_cycle (i_cmd[i]);
+                
+            # (`T_R + `T_RR) // # 25
+            
+            for (i = 0; i<C_Length; i=1+1) begin
+                dataout_cycle();
+            end
+            i_next_state <= STATE_IDLE;
+        end 
+        else begin
+            i_next_state <= STATE_IDLE;
+        end
+    end
     // STATE_WRIT: begin
     //     if (C_Cmd == 1) begin
     //         i_next_state <= 2'b01;
@@ -211,7 +224,6 @@ task datain_cycle;
 endtask
 
 task dataout_cycle;
-    output [7:0] data;
     if (F_nRB) begin
         
         begin: dataout_cycle
@@ -221,7 +233,7 @@ task dataout_cycle;
             // buff <= data;
             
             # (`T_RP) // # 10
-            F_nWE = ~F_nWE;
+            F_nRE = ~F_nRE;
 
             # (`T_REH); // # 7
         end
