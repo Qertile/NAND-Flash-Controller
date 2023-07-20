@@ -20,11 +20,9 @@ The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 - [ ] FSM
 
 -----------------------------------
-## Unreleased v0.1.9 (2023.07.##)
+## Unreleased v0.1.10 (2023.07.##)
 ### New
 ### Changed
-1. rename datain_cycle to rddata_cycle
-2. rename dataout_cycle to wrdata_cycle
 ### Removed
 ### Deprecated
 ### Fixed
@@ -33,11 +31,23 @@ The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 ### Reference
 
 -----------------------------------
+## NFC v0.1.9 (2023.07.20)
+### New
+1. create `C_DataIn` in FSM.v
+1. create `FSM_0` in NAND_controller.v
+### Changed
+1. rename datain_cycle to wrdata_cycle
+2. rename dataout_cycle to rddata_cycle
+3. rename PCLK in FSM.v to P_clk
+4. rename PRESETN in FSM.v to P_nrst
+
+
+-----------------------------------
 ## NFC v0.1.8 (2023.07.20)
 ### New
 1. implement `STATE_READ`
 2. implement `STATE_WRIT`
-3. implement `STATE_RSET`
+3. implement `STATE_ERAS`
 ### Notes
 1. need connect data in and out in state machine
 

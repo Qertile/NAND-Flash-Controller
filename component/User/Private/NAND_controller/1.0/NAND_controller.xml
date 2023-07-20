@@ -111,8 +111,6 @@
       <spirit:signal>
         <spirit:name>F_DIO</spirit:name>
         <spirit:direction>out</spirit:direction>
-        <spirit:left>7</spirit:left>
-        <spirit:right>0</spirit:right>
       </spirit:signal>
     </spirit:signals>
     <spirit:hwParameters>

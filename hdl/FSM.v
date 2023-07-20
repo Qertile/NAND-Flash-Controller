@@ -1,14 +1,15 @@
 `include "inc.v"
 module fsm (
     /* APB Inputs */
-    PCLK,
-    PRESETN,
+    P_clk,
+    P_nrst,
 
     /* Controller Inputs */
     C_Cmd,
     C_Addr,
     C_Length,
     C_Status,
+    C_DataIn,
     
     /* Controller Outputs */
     F_nCE, 
@@ -18,35 +19,39 @@ module fsm (
     F_nRE, 
     F_nWP,
     F_nRB,
+    /* Controller I/O */
     F_DIO
 );
 
 /* APB Inputs */
-input       PCLK;
-input       PRESETN;
+input       P_clk;
+input       P_nrst;
 
 /* Controller Inputs */
 input       C_Cmd;
 input       C_Addr;
 input       C_Length;
 input       C_Status;
+input       C_DataIn
 input       F_nRB; 
 
 /* Controller output */
-output       F_nCE; 
-output       F_CLE; 
-output       F_ALE; 
-output       F_nWE; 
-output       F_nRE; 
-output       F_nWP;
-output       F_DIO;
+output      F_nCE; 
+output      F_CLE; 
+output      F_ALE; 
+output      F_nWE; 
+output      F_nRE; 
+output      F_nWP;
+inout       F_DIO;
 
 
-/* Control registers and Status register  */
+/* Controller Inputs */
 wire    [7:0]   C_Cmd;
 wire    [7:0]   C_Addr;
 wire    [7:0]   C_Length;
 wire    [7:0]   C_Status;
+wire    [7:0]   C_DataIn; // data from tx FIFO
+wire    [7:0]   F_DIO;
 
 /* Controller output */
 reg F_nCE;
@@ -55,7 +60,6 @@ reg F_ALE;
 reg F_nWE;
 reg F_nRE;
 reg F_nWP;
-reg [7:0] F_DIO;
 
 
 /* Internal signals and array */
@@ -77,8 +81,8 @@ parameter   STATE_RX    = 3'b100;
 
 
 
-always @(posedge PCLK or negedge PRESETN) begin
-    if (!PRESETN) begin
+always @(posedge P_clk or negedge P_nrst) begin
+    if (!P_nrst) begin
         /* reset NAND flash */
         i_state <= STATE_RSET;
         /* reset command buffer */
@@ -105,7 +109,7 @@ integer i;
 always @(*) begin
     case (i_state)
     STATE_RSET: begin
-        if (!PRESETN) begin
+        if (!P_nrst) begin
             command_cycle(8'hFF);
             i_next_state <= STATE_IDLE;
         end 
@@ -128,7 +132,7 @@ always @(*) begin
             # (`T_R + `T_RR) // # 25
             
             for (i = 0; i<C_Length; i=1+1) begin
-                wrdata_cycle();
+                rddata_cycle();
             end
             i_next_state <= STATE_IDLE;
         end 
@@ -146,7 +150,7 @@ always @(*) begin
             # (`T_ADL) // # 70
             
             for (i = 0; i<C_Length; i=1+1) begin
-                rddata_cycle();
+                wrdata_cycle();
             end
 
             command_cycle (i_cmd[i]);
@@ -156,7 +160,7 @@ always @(*) begin
             i_next_state <= STATE_IDLE;
         end
     end
-    STATE_RSET: begin
+    STATE_ERAS: begin
         if (i_cmd[0] == 8'h60 && i_cmd[1] == 8'hD0) begin
             command_cycle(i_cmd[0]);
          
@@ -214,9 +218,9 @@ task address_cycle;
     end
 endtask
 
-task rddata_cycle;
+task wrdata_cycle;
     // input [7:0] data;
-    begin: rddata_cycle
+    begin: wrdata_cycle
 
         F_CLE = (`LOW);
         F_nCE = (`LOW);
@@ -231,10 +235,10 @@ task rddata_cycle;
     end
 endtask
 
-task wrdata_cycle;
+task rddata_cycle;
     if (F_nRB) begin
         
-        begin: wrdata_cycle
+        begin: rddata_cycle
 
             F_nCE = (`LOW);
             F_nRE = (`LOW);

@@ -89,12 +89,12 @@ wire            C_rd_enable;
 wire            C_tx_ready;
 wire            C_rx_ready;
 
-/* Control registers and Status register  */
-reg     [7:0]   F_DIO;
-reg     [15:0]  C_Cmd;
-reg     [39:0]  C_Addr;
-reg     [7:0]   C_Length;
-reg     [7:0]   C_Status;
+// /* Control registers and Status register  */
+// reg     [7:0]   F_DIO;
+// reg     [15:0]  C_Cmd;
+// reg     [39:0]  C_Addr;
+// reg     [7:0]   C_Length;
+// reg     [7:0]   C_Status;
 
 //<statements>
 assign C_wr_enable = (PENABLE && PWRITE && PSEL);
@@ -111,7 +111,7 @@ fifo TX_FIFO(
     .read_en(),
 
     // Output
-    .dout(C_tx_data),
+    .dout(C_DataIn),
     .full(C_tx_ready),
     .empty()
 );
@@ -131,6 +131,31 @@ fifo RX_FIFO(
 );
 /* ========== FIFO ========== */
 
+/* ========== FIFO ========== */
+fsm FSM_0(
+    /* APB Inputs */
+    .P_clk(PCLK),
+    .P_nrst(PRESETN),
+
+    /* Controller Inputs */
+    .C_Cmd(),
+    .C_Addr(),
+    .C_Length(),
+    .C_Status(),
+    .C_DataIn(),
+    
+    /* Controller Outputs */
+    .F_nCE(F_nCE), 
+    .F_CLE(F_CLE), 
+    .F_ALE(F_ALE), 
+    .F_nWE(F_nWE), 
+    .F_nRE(F_nRE), 
+    .F_nWP(F_nWP),
+    .F_nRB(F_nRB),
+    /* Controller I/O */
+    .F_DIO(F_DIO)
+);
+/* ========== FIFO ========== */
 /* ----- FSM ----- 
 
 if (PADDR == Tx_FIFO_addr){

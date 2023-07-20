@@ -733,8 +733,8 @@ SIZE="877"
 ENDFILE
 VALUE "<project>\hdl\FSM.v,hdl"
 STATE="utd"
-TIME="1689757648"
-SIZE="4728"
+TIME="1689824426"
+SIZE="5343"
 ENDFILE
 VALUE "<project>\hdl\inc.v,hdl"
 STATE="utd"
@@ -1090,13 +1090,9 @@ ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
 HDL;hdl\FSM.v;0
-Reports;Reports;0
-ReportsCurrentItem;Generate Memory Map:SF2_DataSheet.xml
-HDL;component\work\CoreUARTapb_C0\CoreUARTapb_C0.v;0
 HDL;hdl\NAND_controller.v;0
 HDL;hdl\FIFO.v;0
 SmartDesign;SF2;0
-StartPage;StartPage;0
 ACTIVEVIEW;hdl\FSM.v
 ENDLIST
 LIST ModuleSubBlockList
