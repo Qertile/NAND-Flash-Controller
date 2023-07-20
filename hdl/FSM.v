@@ -100,6 +100,8 @@ always @(posedge PCLK or negedge PRESETN) begin
         end
     end
 end
+
+integer i;
 always @(*) begin
     case (i_state)
     STATE_RSET: begin
@@ -116,14 +118,12 @@ always @(*) begin
         i_next_state <= STATE_IDLE;
     end
     STATE_READ: begin
-        integer i;
         if (i_cmd[0] == 8'h00 && i_cmd[1] == 8'h30) begin
             command_cycle (i_cmd[0]);
-
             for (i = 0; i<5; i=1+1) begin
-                command_cycle (i_cmd[1]);
+                address_cycle (i_addr[i]);
             end
-            command_cycle (i_cmd[i]);
+            command_cycle (i_cmd[1]);
                 
             # (`T_R + `T_RR) // # 25
             
@@ -136,29 +136,37 @@ always @(*) begin
             i_next_state <= STATE_IDLE;
         end
     end
-    // STATE_WRIT: begin
-    //     if (C_Cmd == 1) begin
-    //         i_next_state <= 2'b01;
-    //     end 
-    //     else begin
-    //         i_next_state <= 2'b00;
-    //     end
-    // end
-    // STATE_ERAS: begin
-    //     if (C_Cmd == 1) begin
-    //         i_next_state <= 2'b01;
-    //     end else begin
-    //         i_next_state <= 2'b00;
-    //     end
-    // end
-    // STATE_RX: begin
-    //     if (C_Cmd == 1) begin
-    //         i_next_state <= 2'b01;
-    //     end 
-    //     else begin
-    //         i_next_state <= 2'b00;
-    //     end
-    // end
+    STATE_WRIT: begin
+        if (i_cmd[0] == 8'h80 && i_cmd[1] == 8'h10) begin
+            command_cycle (i_cmd[0]);
+            for (i = 0; i<5; i=1+1) begin
+                address_cycle (i_addr[i]);
+            end
+
+            # (`T_ADL) // # 70
+            
+            for (i = 0; i<C_Length; i=1+1) begin
+                datain_cycle();
+            end
+
+            command_cycle (i_cmd[i]);
+            i_next_state <= STATE_IDLE;
+        end 
+        else begin
+            i_next_state <= STATE_IDLE;
+        end
+    end
+    STATE_RSET: begin
+        if (i_cmd[0] == 8'h60 && i_cmd[1] == 8'hD0) begin
+            command_cycle(i_cmd[0]);
+         
+            for (i = 0; i<3; i=1+1) begin
+                address_cycle (i_addr[i]);
+            end
+        
+            command_cycle(i_cmd[1]);
+        end
+    end
     default: begin
         idle_cycle();
         i_next_state <= STATE_IDLE;
