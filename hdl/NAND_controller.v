@@ -41,6 +41,7 @@ module NAND_controller(
     F_nRE, 
     F_nWP,
     F_nRB,
+    /* Controller Inout  */
     F_DIO
 );
 //--------------------------------------------------------------------
@@ -142,7 +143,7 @@ fsm FSM_0(
     .C_Addr(),
     .C_Length(),
     .C_Status(),
-    .C_DataIn(),
+    .C_DataIn(),    
     
     /* Controller Outputs */
     .F_nCE(F_nCE), 

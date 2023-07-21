@@ -9,7 +9,8 @@ module fsm (
     C_Addr,
     C_Length,
     C_Status,
-    C_DataIn,
+    C_RdData,
+    C_WrData,
     
     /* Controller Outputs */
     F_nCE, 
@@ -32,7 +33,7 @@ input       C_Cmd;
 input       C_Addr;
 input       C_Length;
 input       C_Status;
-input       C_DataIn
+input       C_RdData;
 input       F_nRB; 
 
 /* Controller output */
@@ -42,6 +43,7 @@ output      F_ALE;
 output      F_nWE; 
 output      F_nRE; 
 output      F_nWP;
+output      C_WrData;
 inout       F_DIO;
 
 
@@ -50,8 +52,9 @@ wire    [7:0]   C_Cmd;
 wire    [7:0]   C_Addr;
 wire    [7:0]   C_Length;
 wire    [7:0]   C_Status;
-wire    [7:0]   C_DataIn; // data from tx FIFO
+wire    [7:0]   C_RdData; // data from tx FIFO
 wire    [7:0]   F_DIO;
+
 
 /* Controller output */
 reg F_nCE;
@@ -60,6 +63,7 @@ reg F_ALE;
 reg F_nWE;
 reg F_nRE;
 reg F_nWP;
+reg [7:0]   C_WrData;
 
 
 /* Internal signals and array */
@@ -68,7 +72,9 @@ reg [2:0]   i_next_state;
 reg [7:0]   i_cmd  [1:0];
 reg [7:0]   i_addr [4:0];
 reg         icmd_ptr;
-reg [2:0]   iaddr_ptr ;
+reg [2:0]   iaddr_ptr;
+reg [7:0]   i_wrdata_buffer;
+reg [7:0]   i_rddata_buffer;
 
 
 /* Custom define states for state machine */
@@ -80,6 +86,7 @@ parameter   STATE_ERAS  = 3'b011;
 parameter   STATE_RX    = 3'b100;
 
 
+assign F_DIO = i_wrdata_buffer;
 
 always @(posedge P_clk or negedge P_nrst) begin
     if (!P_nrst) begin
@@ -129,10 +136,10 @@ always @(*) begin
             end
             command_cycle (i_cmd[1]);
                 
-            # (`T_R + `T_RR) // # 25
+            # (`T_R + `T_RR) // # 20+25
             
             for (i = 0; i<C_Length; i=1+1) begin
-                rddata_cycle();
+                rddata_cycle(F_DIO);
             end
             i_next_state <= STATE_IDLE;
         end 
@@ -150,7 +157,7 @@ always @(*) begin
             # (`T_ADL) // # 70
             
             for (i = 0; i<C_Length; i=1+1) begin
-                wrdata_cycle();
+                wrdata_cycle(C_WrData);
             end
 
             command_cycle (i_cmd[i]);
@@ -188,7 +195,7 @@ task command_cycle;
         F_nCE = (`LOW);
         F_nWE = (`LOW);
         F_ALE = (`LOW);
-        // buff <= cmd;
+        i_wrdata_buffer <= cmd;
         
         # (`T_CS) // # 15
         F_nWE = ~F_nWE;
@@ -209,7 +216,7 @@ task address_cycle;
         F_nCE = (`LOW);
         F_nWE = (`LOW);
         F_ALE = (`HIGH);
-        // buff <= addr;
+        i_wrdata_buffer <= addr;
         
         # (`T_WP) // # 10
         F_nWE = ~F_nWE;
@@ -219,14 +226,14 @@ task address_cycle;
 endtask
 
 task wrdata_cycle;
-    // input [7:0] data;
+    input [7:0] data;
     begin: wrdata_cycle
 
         F_CLE = (`LOW);
         F_nCE = (`LOW);
         F_ALE = (`LOW);
         F_nWE = (`LOW);
-        // buff <= data;
+        i_wrdata_buffer <= data;
         
         # (`T_WP) // # 10
         F_nWE = ~F_nWE;
@@ -236,13 +243,14 @@ task wrdata_cycle;
 endtask
 
 task rddata_cycle;
+    input [7:0] data;
     if (F_nRB) begin
         
         begin: rddata_cycle
 
             F_nCE = (`LOW);
             F_nRE = (`LOW);
-            // buff <= data;
+            i_rddata_buffer = data;
             
             # (`T_RP) // # 10
             F_nRE = ~F_nRE;
