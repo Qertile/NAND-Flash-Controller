@@ -22,3 +22,11 @@ memmap NAND_controller_0 0x5000_0000;
 # Include resource scriptlets
 #-----------------------------------------------------------
 
+
+#-----------------------------------------------------------
+# Peripheral Initialization
+#-----------------------------------------------------------
+
+procedure subsystem_init;
+# No peripheral initialization required
+return

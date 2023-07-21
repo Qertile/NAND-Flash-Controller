@@ -33,7 +33,7 @@ input       C_Cmd;
 input       C_Addr;
 input       C_Length;
 input       C_Status;
-input       C_RdData;
+input       C_WrData; // from Tx FIFO to controller buffer
 input       F_nRB; 
 
 /* Controller output */
@@ -43,7 +43,7 @@ output      F_ALE;
 output      F_nWE; 
 output      F_nRE; 
 output      F_nWP;
-output      C_WrData;
+output      C_RdData; // from controller buffer to Rx FIFO
 inout       F_DIO;
 
 
@@ -52,7 +52,7 @@ wire    [7:0]   C_Cmd;
 wire    [7:0]   C_Addr;
 wire    [7:0]   C_Length;
 wire    [7:0]   C_Status;
-wire    [7:0]   C_RdData; // data from tx FIFO
+wire    [7:0]   C_WrData; 
 wire    [7:0]   F_DIO;
 
 
@@ -63,7 +63,7 @@ reg F_ALE;
 reg F_nWE;
 reg F_nRE;
 reg F_nWP;
-reg [7:0]   C_WrData;
+reg [7:0]   C_RdData;
 
 
 /* Internal signals and array */
@@ -250,7 +250,7 @@ task rddata_cycle;
 
             F_nCE = (`LOW);
             F_nRE = (`LOW);
-            i_rddata_buffer = data;
+            i_rddata_buffer <= data;
             
             # (`T_RP) // # 10
             F_nRE = ~F_nRE;

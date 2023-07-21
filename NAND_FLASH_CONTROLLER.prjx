@@ -44,7 +44,7 @@ KEY LossOfDataDRCSeverity "TRUE"
 KEY IdWidthMismatchDRCSeverity "TRUE"
 KEY SimulationType "VERILOG"
 KEY Vendor "Actel"
-KEY ActiveRoot "SF2::work"
+KEY ActiveRoot "fsm::work"
 LIST REVISIONS
 VALUE="Impl1",NUM=1
 CURREV=1
@@ -733,8 +733,8 @@ SIZE="877"
 ENDFILE
 VALUE "<project>\hdl\FSM.v,hdl"
 STATE="utd"
-TIME="1689923953"
-SIZE="5653"
+TIME="1689930306"
+SIZE="5708"
 ENDFILE
 VALUE "<project>\hdl\inc.v,hdl"
 STATE="utd"
@@ -824,6 +824,11 @@ VALUE "<project>\stimulus\controller_tb.v,tb_hdl"
 STATE="utd"
 TIME="1688546918"
 SIZE="2987"
+ENDFILE
+VALUE "<project>\stimulus\FSM_tb.v,tb_hdl"
+STATE="utd"
+TIME="1689929254"
+SIZE="2189"
 ENDFILE
 ENDLIST
 LIST UsedFile
@@ -1054,7 +1059,7 @@ NAME="ModelSim ME Pro"
 FUNCTION="Simulation"
 TOOL="ModelSim Pro Edition"
 LOCATION="C:\Microsemi\Libero_SoC_v2022.1\ModelSimPro\win32acoem\modelsim.exe"
-PARAM=""
+PARAM=" -l controller_tb_presynth_simulation.log "
 BATCH=0
 LICENSE=""
 IS32BIT="1"
@@ -1271,6 +1276,9 @@ ENDLIST
 LIST "MEM_WeqR::work","component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WeqR.v","FALSE","TRUE"
 ENDLIST
 LIST "CoreUARTapb_C0_CoreUARTapb_C0_0_BFM_MAIN::work","component\work\CoreUARTapb_C0\CoreUARTapb_C0_0\rtl\vlog\amba_bfm\bfm_main.v","FALSE","TRUE"
+ENDLIST
+LIST "FSM_tb::work","stimulus\FSM_tb.v","FALSE","TRUE"
+SUBBLOCK "fsm::work","hdl\FSM.v","FALSE","FALSE"
 ENDLIST
 LIST "MEM_WgtR::work","component\Actel\DirectCore\COREFIFO\3.0.101\rtl\vlog\test\user\MEM_WgtR.v","FALSE","TRUE"
 ENDLIST
