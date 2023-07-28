@@ -87,6 +87,12 @@ parameter   STATE_WRIT  = 3'b010;
 parameter   STATE_ERAS  = 3'b011;
 parameter   STATE_RX    = 3'b100;
 
+/* command for state machine */
+parameter   CMD_RSET  = 8'hFF;
+parameter   CMD_READ  = 8'h00;
+parameter   CMD_WRIT  = 8'h80;
+parameter   CMD_ERAS  = 8'h60;
+
 
 assign F_DIO = i_wrdata_buffer;
 
@@ -99,7 +105,21 @@ always @(posedge P_clk or negedge P_nrst) begin
         iaddr_ptr <= 0;
     end 
     else begin
-        i_state <= STATE_IDLE;
+        case (C_Cmd)
+        CMD_RSET: begin
+            i_state = STATE_RSET;
+        end
+        CMD_READ: begin
+            i_state = STATE_READ;
+        end
+        CMD_WRIT: begin
+            i_state = STATE_WRIT;
+        end
+        CMD_ERAS: begin
+            i_state = STATE_ERAS;
+        end
+            default: i_state = STATE_IDLE;
+    endcase
     end
     if(C_Cmd)begin
         i_cmd[icmd_ptr] <= C_Cmd;
@@ -112,23 +132,25 @@ always @(posedge P_clk or negedge P_nrst) begin
             iaddr_ptr <= 0;
         end
     end
+    
 end
 
 integer i;
 always @(i_state) begin
+
     case (i_state)
     STATE_RSET: begin
         if (!P_nrst) begin
             command_cycle(8'hFF);
-            i_next_state <= STATE_IDLE;
+            // i_next_state <= STATE_IDLE;
         end 
         else begin
-            i_next_state <= STATE_IDLE;
+            // i_next_state <= STATE_IDLE;
         end
     end
     STATE_IDLE: begin
         idle_cycle();
-        i_next_state <= STATE_IDLE;
+        // i_next_state <= STATE_IDLE;
     end
     STATE_READ: begin
         if (i_cmd[0] == 8'h00 && i_cmd[1] == 8'h30) begin
@@ -143,10 +165,10 @@ always @(i_state) begin
             for (i = 0; i<C_Length; i=1+1) begin
                 rddata_cycle(F_DIO);
             end
-            i_next_state <= STATE_IDLE;
+            // i_next_state <= STATE_IDLE;
         end 
         else begin
-            i_next_state <= STATE_IDLE;
+            // i_next_state <= STATE_IDLE;
         end
     end
     STATE_WRIT: begin
@@ -163,10 +185,10 @@ always @(i_state) begin
             end
 
             command_cycle (i_cmd[i]);
-            i_next_state <= STATE_IDLE;
+            // i_next_state <= STATE_IDLE;
         end 
         else begin
-            i_next_state <= STATE_IDLE;
+            // i_next_state <= STATE_IDLE;
         end
     end
     STATE_ERAS: begin
@@ -182,7 +204,7 @@ always @(i_state) begin
     end
     default: begin
         idle_cycle();
-        i_next_state <= STATE_IDLE;
+        // i_next_state <= STATE_IDLE;
     end
     endcase
 end
@@ -266,6 +288,12 @@ task idle_cycle;
     begin: idle_cycle
 
         F_nCE = (`HIGH);
+        F_CLE = 1'bx;
+        F_ALE = 1'bx;
+        F_nWE = 1'bx;
+        F_nRE = 1'bx;
+        F_nWP = (`LOW);
+
     end
 endtask
 endmodule

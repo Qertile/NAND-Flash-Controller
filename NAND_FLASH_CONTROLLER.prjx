@@ -733,8 +733,8 @@ SIZE="877"
 ENDFILE
 VALUE "<project>\hdl\FSM.v,hdl"
 STATE="utd"
-TIME="1690516274"
-SIZE="5738"
+TIME="1690528631"
+SIZE="6373"
 ENDFILE
 VALUE "<project>\hdl\inc.v,hdl"
 STATE="utd"
@@ -793,8 +793,8 @@ PARENT="<project>\component\work\CoreUARTapb_C0\CoreUARTapb_C0_0\CoreUARTapb_C0_
 ENDFILE
 VALUE "<project>\simulation\FSM_tb_presynth_simulation.log,log"
 STATE="utd"
-TIME="1690516293"
-SIZE="5800"
+TIME="1690528655"
+SIZE="19870"
 ENDFILE
 VALUE "<project>\simulation\peripheral_init.bfm,sim"
 STATE="utd"
@@ -832,7 +832,7 @@ SIZE="2987"
 ENDFILE
 VALUE "<project>\stimulus\FSM_tb.v,tb_hdl"
 STATE="utd"
-TIME="1690523261"
+TIME="1690524700"
 SIZE="2432"
 ENDFILE
 ENDLIST
@@ -1145,7 +1145,7 @@ HDL;hdl\NAND_controller.v;0
 HDL;stimulus\FSM_tb.v;0
 HDL;stimulus\controller_tb.v;0
 SmartDesign;SF2;0
-ACTIVEVIEW;stimulus\FSM_tb.v
+ACTIVEVIEW;hdl\FSM.v
 ENDLIST
 LIST ModuleSubBlockList
 LIST "CoreAPB3_C0::work","component\work\CoreAPB3_C0\CoreAPB3_C0.v","TRUE","FALSE"
