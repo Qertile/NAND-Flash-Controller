@@ -20,7 +20,7 @@ The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 - [ ] FSM
 
 -----------------------------------
-## Unreleased v0.1.14 (2023.07.##)
+## Unreleased v0.1.15 (2023.07.##)
 ### New
 ### Changed
 ### Removed
@@ -31,12 +31,19 @@ The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 ### Reference
 
 -----------------------------------
-## Unreleased v0.1.13 (2023.07.28)
-### New
-1. add other signal beside (F_nCE) in idle_cycle()
-2. create case C_Cmd
+## NFC v0.1.14 (2023.07.##)
 ### Fixed
-1. fix state stay in idle
+- `i_cmd` doesn't catch commands properly
+### Known Issues
+- State machine doesn't do the state because of command/address are not arrive while state changing. --> need a signal or flag to indicate cmd/addr buffer is full, it is good to change state
+
+-----------------------------------
+## NFC v0.1.13 (2023.07.28)
+### New
+- add other signal beside (F_nCE) in idle_cycle()
+- create case C_Cmd
+### Fixed
+- fix state stay in idle
 ### Known Issues
 - `i_cmd` doesn't catch commands properly
 

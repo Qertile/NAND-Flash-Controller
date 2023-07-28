@@ -118,23 +118,23 @@ always @(posedge P_clk or negedge P_nrst) begin
         CMD_ERAS: begin
             i_state = STATE_ERAS;
         end
-            default: i_state = STATE_IDLE;
+            default: i_state = i_state;
     endcase
     end
-    if(C_Cmd)begin
-        i_cmd[icmd_ptr] <= C_Cmd;
-        icmd_ptr = ~icmd_ptr;
-    end
-    if(C_Addr)begin
-        i_addr[iaddr_ptr] <= C_Addr;
-        iaddr_ptr = iaddr_ptr+1;
-        if (iaddr_ptr == 3'd5) begin
-            iaddr_ptr <= 0;
-        end
-    end
-    
 end
 
+always @(C_Cmd) begin
+    i_cmd[icmd_ptr] <= C_Cmd;
+    icmd_ptr = ~icmd_ptr;
+end
+
+always @(C_Addr) begin
+    i_addr[iaddr_ptr] <= C_Addr;
+    iaddr_ptr = iaddr_ptr+1;
+    if (iaddr_ptr == 3'd5) begin
+        iaddr_ptr <= 0;
+    end
+end
 integer i;
 always @(i_state) begin
 

@@ -3,7 +3,7 @@
 
 module FSM_tb;
 
-parameter SYSCLK_PERIOD = 1;// 1000MHZ
+parameter SYSCLK_PERIOD = 1;// 100MHZ
 
 /* --- external signals --- */
 reg SYSCLK;
@@ -54,10 +54,18 @@ end
 //////////////////////////////////////////////////////////////////////
 // Host Simulator
 //////////////////////////////////////////////////////////////////////
+
+/* Command Signal */
 initial begin
-    #(SYSCLK_PERIOD * 30 )
+    #(SYSCLK_PERIOD * 40 )
     C_Cmd = 8'h00;
-    #(SYSCLK_PERIOD * 20 )
+    #(SYSCLK_PERIOD * 10 )
+    C_Cmd = 8'h30;
+end
+
+/* Address Signal */
+initial begin
+    #(SYSCLK_PERIOD * 40 )
     C_Addr = 8'hA0;
     #(SYSCLK_PERIOD * 20 )
     C_Addr = 8'hA1;
@@ -67,10 +75,7 @@ initial begin
     C_Addr = 8'hA3;
     #(SYSCLK_PERIOD * 20 )
     C_Addr = 8'hA4;
-    #(SYSCLK_PERIOD * 20 )
-    C_Cmd = 8'h30;
 end
-
 //always @(posedge SYSCLK) begin
 //
 //

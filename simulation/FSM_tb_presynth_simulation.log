@@ -420,3 +420,260 @@ res
 restart 
 # ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 run 1us
+do run.do
+# INFO: Simulation library presynth already exists
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap presynth presynth 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap SmartFusion2 C:/Microsemi/Libero_SoC_v2022.1/Designer/lib/modelsimpro/precompiled/vlog/SmartFusion2 
+# Modifying modelsim.ini
+# INFO: Simulation library COREAPB3_LIB already exists
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap COREAPB3_LIB COREAPB3_LIB 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
+# Start time: 16:08:05 on Jul 28,2023
+# vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/FSM.v 
+# -- Compiling module fsm
+# 
+# Top level modules:
+# 	fsm
+# End time: 16:08:05 on Jul 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
+# Start time: 16:08:05 on Jul 28,2023
+# vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl" "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/FSM_tb.v 
+# -- Compiling module FSM_tb
+# 
+# Top level modules:
+# 	FSM_tb
+# End time: 16:08:05 on Jul 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:08:05 on Jul 28,2023, Elapsed time: 0:40:37
+# Errors: 0, Warnings: 0
+# vsim -L SmartFusion2 -L presynth -L COREAPB3_LIB -t 1fs presynth.FSM_tb 
+# Start time: 16:08:05 on Jul 28,2023
+# Loading presynth.FSM_tb
+# Loading presynth.fsm
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Nathan  Hostname: DESKTOP-UG9O3NH  ProcessID: 21104
+#           Attempting to use alternate WLF file "./wlftz3ghd7".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftz3ghd7
+add wave -position end  sim:/FSM_tb/fsm_0/i_state
+add wave -position end  sim:/FSM_tb/fsm_0/i_cmd
+restart 
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run 1 us
+do run.do
+# INFO: Simulation library presynth already exists
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap presynth presynth 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap SmartFusion2 C:/Microsemi/Libero_SoC_v2022.1/Designer/lib/modelsimpro/precompiled/vlog/SmartFusion2 
+# Modifying modelsim.ini
+# INFO: Simulation library COREAPB3_LIB already exists
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap COREAPB3_LIB COREAPB3_LIB 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
+# Start time: 16:10:53 on Jul 28,2023
+# vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/FSM.v 
+# -- Compiling module fsm
+# 
+# Top level modules:
+# 	fsm
+# End time: 16:10:53 on Jul 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
+# Start time: 16:10:53 on Jul 28,2023
+# vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl" "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/FSM_tb.v 
+# -- Compiling module FSM_tb
+# ** Error: (vlog-13069) C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/FSM_tb.v(79): near "end": syntax error, unexpected end.
+# ** Error: C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/FSM_tb.v(118): Checker 'fsm' not found.  Instantiation 'fsm_0' must be of a visible checker.
+# 
+# ** Error: (vlog-13069) C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/FSM_tb.v(120): near "endmodule": syntax error, unexpected endmodule.
+# End time: 16:10:53 on Jul 28,2023, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: C:/Microsemi/Libero_SoC_v2022.1/ModelSimPro/win32acoem/vlog failed.
+# Error in macro ./run.do line 21
+# C:/Microsemi/Libero_SoC_v2022.1/ModelSimPro/win32acoem/vlog failed.
+#     while executing
+# "vlog "+incdir+${PROJECT_DIR}/hdl" "+incdir+${PROJECT_DIR}/stimulus" -vlog01compat -work presynth "${PROJECT_DIR}/stimulus/FSM_tb.v""
+do run.do
+# INFO: Simulation library presynth already exists
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap presynth presynth 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap SmartFusion2 C:/Microsemi/Libero_SoC_v2022.1/Designer/lib/modelsimpro/precompiled/vlog/SmartFusion2 
+# Modifying modelsim.ini
+# INFO: Simulation library COREAPB3_LIB already exists
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap COREAPB3_LIB COREAPB3_LIB 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
+# Start time: 16:15:05 on Jul 28,2023
+# vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/FSM.v 
+# -- Compiling module fsm
+# 
+# Top level modules:
+# 	fsm
+# End time: 16:15:05 on Jul 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
+# Start time: 16:15:05 on Jul 28,2023
+# vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl" "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/FSM_tb.v 
+# -- Compiling module FSM_tb
+# ** Error: (vlog-13069) C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/FSM_tb.v(79): near "end": syntax error, unexpected end.
+# ** Error: C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/FSM_tb.v(118): Checker 'fsm' not found.  Instantiation 'fsm_0' must be of a visible checker.
+# 
+# ** Error: (vlog-13069) C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/FSM_tb.v(120): near "endmodule": syntax error, unexpected endmodule.
+# End time: 16:15:05 on Jul 28,2023, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: C:/Microsemi/Libero_SoC_v2022.1/ModelSimPro/win32acoem/vlog failed.
+# Error in macro ./run.do line 21
+# C:/Microsemi/Libero_SoC_v2022.1/ModelSimPro/win32acoem/vlog failed.
+#     while executing
+# "vlog "+incdir+${PROJECT_DIR}/hdl" "+incdir+${PROJECT_DIR}/stimulus" -vlog01compat -work presynth "${PROJECT_DIR}/stimulus/FSM_tb.v""
+do run.do
+# INFO: Simulation library presynth already exists
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap presynth presynth 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap SmartFusion2 C:/Microsemi/Libero_SoC_v2022.1/Designer/lib/modelsimpro/precompiled/vlog/SmartFusion2 
+# Modifying modelsim.ini
+# INFO: Simulation library COREAPB3_LIB already exists
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap COREAPB3_LIB COREAPB3_LIB 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
+# Start time: 16:16:08 on Jul 28,2023
+# vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/FSM.v 
+# -- Compiling module fsm
+# 
+# Top level modules:
+# 	fsm
+# End time: 16:16:08 on Jul 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
+# Start time: 16:16:08 on Jul 28,2023
+# vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl" "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/FSM_tb.v 
+# -- Compiling module FSM_tb
+# 
+# Top level modules:
+# 	FSM_tb
+# End time: 16:16:08 on Jul 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 16:16:09 on Jul 28,2023, Elapsed time: 0:08:04
+# Errors: 2, Warnings: 0
+# vsim -L SmartFusion2 -L presynth -L COREAPB3_LIB -t 1fs presynth.FSM_tb 
+# Start time: 16:16:09 on Jul 28,2023
+# Loading presynth.FSM_tb
+# Loading presynth.fsm
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Nathan  Hostname: DESKTOP-UG9O3NH  ProcessID: 21104
+#           Attempting to use alternate WLF file "./wlftjhr8bj".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftjhr8bj
+add wave -position end  sim:/FSM_tb/fsm_0/i_cmd
+add wave -position end  sim:/FSM_tb/fsm_0/i_state
+restart 
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run 1 us
+do run.do
+# INFO: Simulation library presynth already exists
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap presynth presynth 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap SmartFusion2 C:/Microsemi/Libero_SoC_v2022.1/Designer/lib/modelsimpro/precompiled/vlog/SmartFusion2 
+# Modifying modelsim.ini
+# INFO: Simulation library COREAPB3_LIB already exists
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap COREAPB3_LIB COREAPB3_LIB 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
+# Start time: 17:12:44 on Jul 28,2023
+# vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/FSM.v 
+# -- Compiling module fsm
+# 
+# Top level modules:
+# 	fsm
+# End time: 17:12:44 on Jul 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
+# Start time: 17:12:44 on Jul 28,2023
+# vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl" "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/FSM_tb.v 
+# -- Compiling module FSM_tb
+# 
+# Top level modules:
+# 	FSM_tb
+# End time: 17:12:44 on Jul 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:12:45 on Jul 28,2023, Elapsed time: 0:56:36
+# Errors: 0, Warnings: 0
+# vsim -L SmartFusion2 -L presynth -L COREAPB3_LIB -t 1fs presynth.FSM_tb 
+# Start time: 17:12:45 on Jul 28,2023
+# Loading presynth.FSM_tb
+# Loading presynth.fsm
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Nathan  Hostname: DESKTOP-UG9O3NH  ProcessID: 21104
+#           Attempting to use alternate WLF file "./wlft9k828m".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft9k828m
+add wave -position end  sim:/FSM_tb/fsm_0/i_state
+add wave -position end  sim:/FSM_tb/fsm_0/i_cmd
+restart 
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run 1 us
+do run.do
+# INFO: Simulation library presynth already exists
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap presynth presynth 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap SmartFusion2 C:/Microsemi/Libero_SoC_v2022.1/Designer/lib/modelsimpro/precompiled/vlog/SmartFusion2 
+# Modifying modelsim.ini
+# INFO: Simulation library COREAPB3_LIB already exists
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap COREAPB3_LIB COREAPB3_LIB 
+# Modifying modelsim.ini
+# Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
+# Start time: 17:16:03 on Jul 28,2023
+# vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/FSM.v 
+# -- Compiling module fsm
+# 
+# Top level modules:
+# 	fsm
+# End time: 17:16:03 on Jul 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
+# Start time: 17:16:03 on Jul 28,2023
+# vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl" "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/FSM_tb.v 
+# -- Compiling module FSM_tb
+# 
+# Top level modules:
+# 	FSM_tb
+# End time: 17:16:03 on Jul 28,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# End time: 17:16:04 on Jul 28,2023, Elapsed time: 0:03:19
+# Errors: 0, Warnings: 0
+# vsim -L SmartFusion2 -L presynth -L COREAPB3_LIB -t 1fs presynth.FSM_tb 
+# Start time: 17:16:04 on Jul 28,2023
+# Loading presynth.FSM_tb
+# Loading presynth.fsm
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Nathan  Hostname: DESKTOP-UG9O3NH  ProcessID: 21104
+#           Attempting to use alternate WLF file "./wlft2sz9w9".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft2sz9w9
+add wave -position end  sim:/FSM_tb/fsm_0/i_state
+add wave -position end  sim:/FSM_tb/fsm_0/i_cmd
+add wave -position end  sim:/FSM_tb/fsm_0/i_addr
+restart 
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+run 1 us
