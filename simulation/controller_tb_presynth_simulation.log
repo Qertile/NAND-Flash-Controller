@@ -7,26 +7,30 @@
 # Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
 # vmap SmartFusion2 C:/Microsemi/Libero_SoC_v2022.1/Designer/lib/modelsimpro/precompiled/vlog/SmartFusion2 
 # Modifying modelsim.ini
+# INFO: Simulation library COREAPB3_LIB already exists
+# Model Technology ModelSim Microsemi Pro vmap 2021.3 Lib Mapping Utility 2021.07 Jul 14 2021
+# vmap COREAPB3_LIB COREAPB3_LIB 
+# Modifying modelsim.ini
 # Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
-# Start time: 15:05:44 on Jul 05,2023
+# Start time: 11:30:38 on Jul 28,2023
 # vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/nand.v 
 # -- Compiling module MT29F8G08ABACAWP
 # 
 # Top level modules:
 # 	MT29F8G08ABACAWP
-# End time: 15:05:44 on Jul 05,2023, Elapsed time: 0:00:00
+# End time: 11:30:38 on Jul 28,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim Microsemi Pro vlog 2021.3 Compiler 2021.07 Jul 14 2021
-# Start time: 15:05:44 on Jul 05,2023
+# Start time: 11:30:38 on Jul 28,2023
 # vlog -reportprogress 300 "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl" "+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus" -vlog01compat -work presynth C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/controller_tb.v 
 # -- Compiling module controller_tb
 # 
 # Top level modules:
 # 	controller_tb
-# End time: 15:05:44 on Jul 05,2023, Elapsed time: 0:00:00
+# End time: 11:30:38 on Jul 28,2023, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -L SmartFusion2 -L presynth -t 1fs presynth.controller_tb 
-# Start time: 15:05:44 on Jul 05,2023
+# vsim -L SmartFusion2 -L presynth -L COREAPB3_LIB -t 1fs presynth.controller_tb 
+# Start time: 11:30:38 on Jul 28,2023
 # //  ModelSim Microsemi Pro 2021.3 Jul 14 2021
 # //
 # //  Copyright 1991-2021 Mentor Graphics Corporation
@@ -40,10 +44,13 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# Loading presynth.controller_tb
-# Loading presynth.MT29F8G08ABACAWP
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Nathan  Hostname: DESKTOP-UG9O3NH  ProcessID: 21104
-#           Attempting to use alternate WLF file "./wlft1s73g1".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft1s73g1
+# ** Error: License checkout has been disallowed because
+# only one session is allowed to run on an uncounted nodelocked
+# license and an instance of ModelSim is already running with a
+# nodelocked license on this machine.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./run.do PAUSED at line 23
+# End time: 11:31:27 on Jul 28,2023, Elapsed time: 0:00:49
+# Errors: 1, Warnings: 0

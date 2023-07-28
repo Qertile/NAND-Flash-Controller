@@ -733,8 +733,8 @@ SIZE="877"
 ENDFILE
 VALUE "<project>\hdl\FSM.v,hdl"
 STATE="utd"
-TIME="1689930306"
-SIZE="5708"
+TIME="1690516274"
+SIZE="5738"
 ENDFILE
 VALUE "<project>\hdl\inc.v,hdl"
 STATE="utd"
@@ -791,6 +791,11 @@ TIME="1688611698"
 SIZE="13597"
 PARENT="<project>\component\work\CoreUARTapb_C0\CoreUARTapb_C0_0\CoreUARTapb_C0_CoreUARTapb_C0_0_CoreUARTapb.cxf"
 ENDFILE
+VALUE "<project>\simulation\FSM_tb_presynth_simulation.log,log"
+STATE="utd"
+TIME="1690516293"
+SIZE="5800"
+ENDFILE
 VALUE "<project>\simulation\peripheral_init.bfm,sim"
 STATE="utd"
 TIME="1686792717"
@@ -804,8 +809,8 @@ SIZE="779"
 ENDFILE
 VALUE "<project>\simulation\subsystem.bfm,sim"
 STATE="utd"
-TIME="1688813949"
-SIZE="798"
+TIME="1689928829"
+SIZE="1031"
 PARENT="<project>\component\work\SF2\SF2.cxf"
 ENDFILE
 VALUE "<project>\simulation\test.bfm,sim"
@@ -827,8 +832,8 @@ SIZE="2987"
 ENDFILE
 VALUE "<project>\stimulus\FSM_tb.v,tb_hdl"
 STATE="utd"
-TIME="1689929254"
-SIZE="2189"
+TIME="1690523261"
+SIZE="2432"
 ENDFILE
 ENDLIST
 LIST UsedFile
@@ -871,6 +876,24 @@ VALUE "<project>\component\work\CoreUARTapb_C0\CoreUARTapb_C0_0\coreparameters.v
 VALUE "<project>\component\work\CoreUARTapb_C0\CoreUARTapb_C0_0\rtl\vlog\test\user\testbench.v,tb_hdl"
 VALUE "<project>\component\work\CoreUARTapb_C0\CoreUARTapb_C0_0\mti\scripts\bfmtovec_compile.do,do"
 VALUE "<project>\component\work\CoreUARTapb_C0\CoreUARTapb_C0_0\mti\scripts\wave_vlog_amba.do,do"
+ENDLIST
+ENDLIST
+LIST "fsm::work"
+FILE "<project>\hdl\FSM.v,hdl"
+LIST AssociatedStimulus
+VALUE "<project>\stimulus\FSM_tb.v,tb_hdl"
+ENDLIST
+LIST ProjectState5.1
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
 ENDLIST
 ENDLIST
 LIST "MT29F8G08ABACAWP::work"
@@ -925,6 +948,9 @@ ENDLIST
 LIST AssociatedStimulus
 LIST MT29F8G08ABACAWP
 VALUE "<project>\stimulus\controller_tb.v,tb_hdl"
+ENDLIST
+LIST fsm
+VALUE "<project>\stimulus\FSM_tb.v,tb_hdl"
 ENDLIST
 ENDLIST
 LIST Other_Association
@@ -989,7 +1015,7 @@ Type=max
 RunTime=1000ns
 Resolution=1fs
 VsimOpt=
-EntityName=controller_tb
+EntityName=FSM_tb
 TopInstanceName=<top>_0
 DoFileName=
 DoFileName2=wave.do
@@ -1059,7 +1085,7 @@ NAME="ModelSim ME Pro"
 FUNCTION="Simulation"
 TOOL="ModelSim Pro Edition"
 LOCATION="C:\Microsemi\Libero_SoC_v2022.1\ModelSimPro\win32acoem\modelsim.exe"
-PARAM=" -l controller_tb_presynth_simulation.log "
+PARAM=" -l FSM_tb_presynth_simulation.log "
 BATCH=0
 LICENSE=""
 IS32BIT="1"
@@ -1075,6 +1101,18 @@ IS32BIT="1"
 EndProfile
 ENDLIST
 LIST ProjectState5.1
+LIST "fsm::work"
+LIST Impl1
+ideSTIMULUS=StateSuccess
+LIST FlowOptions
+UsePhySynth=FALSE
+UseSynth=TRUE
+UseFhbAutoInst=FALSE
+ENDLIST
+Used_File_List
+ENDUsed_File_List
+ENDLIST
+ENDLIST
 LIST "MT29F8G08ABACAWP::work"
 LIST Impl1
 ideSTIMULUS=StateSuccess
@@ -1100,12 +1138,14 @@ LIST UserCustomizedFileList
 ENDLIST
 LIST OpenedFileList
 ORIENTATION;HORIZONTAL
-HDL;hdl\FSM.v;0
 HDL;hdl\FIFO.v;0
 HDL;component\work\CoreUARTapb_C0\CoreUARTapb_C0.v;0
+HDL;hdl\FSM.v;0
 HDL;hdl\NAND_controller.v;0
+HDL;stimulus\FSM_tb.v;0
+HDL;stimulus\controller_tb.v;0
 SmartDesign;SF2;0
-ACTIVEVIEW;hdl\FSM.v
+ACTIVEVIEW;stimulus\FSM_tb.v
 ENDLIST
 LIST ModuleSubBlockList
 LIST "CoreAPB3_C0::work","component\work\CoreAPB3_C0\CoreAPB3_C0.v","TRUE","FALSE"
@@ -1325,6 +1365,9 @@ ENDLIST
 LIST ActiveTestBenchList
 LIST "MT29F8G08ABACAWP::work"
 ACTIVETESTBENCH "controller_tb::work","stimulus\controller_tb.v","FALSE"
+ENDLIST
+LIST "fsm::work"
+ACTIVETESTBENCH "FSM_tb::work","stimulus\FSM_tb.v","FALSE"
 ENDLIST
 ENDLIST
 LIST IOTabList

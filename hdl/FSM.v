@@ -1,3 +1,5 @@
+
+`timescale 1ns/100ps
 `include "inc.v"
 module fsm (
     /* APB Inputs */
@@ -113,7 +115,7 @@ always @(posedge P_clk or negedge P_nrst) begin
 end
 
 integer i;
-always @(*) begin
+always @(i_state) begin
     case (i_state)
     STATE_RSET: begin
         if (!P_nrst) begin

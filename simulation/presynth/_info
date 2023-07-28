@@ -10,39 +10,88 @@ z2
 cModel Technology
 dC:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/simulation
 vcontroller_tb
-Z0 !s110 1688540744
+Z0 !s110 1690515038
 !i10b 1
-!s100 NVT2ET3n_Bd<3m;eS3dNa0
-IzVQM1_;hO84N5RD`NBV:_1
+!s100 EzD4@9cR`5Gi1;JDV<;`M2
+IE>FcoiZXGV4^<>YadYz5:3
 Z1 dC:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/simulation
-w1686721785
+w1688546918
 8C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/controller_tb.v
 FC:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/controller_tb.v
-!i122 56
+!i122 66
 L0 30 90
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 Z3 OW;L;2021.3;73
 r1
 !s85 0
 31
-Z4 !s108 1688540744.000000
+Z4 !s108 1690515038.000000
 !s107 C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/controller_tb.v|
 !s90 -reportprogress|300|+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl|+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus|-vlog01compat|-work|presynth|C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/controller_tb.v|
 !s101 -O0
 !i113 1
 Z5 o-vlog01compat -work presynth -O0
-!s92 +incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl +incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus -vlog01compat -work presynth -O0
-Z6 tCvgOpt 0
+Z6 !s92 +incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl +incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus -vlog01compat -work presynth -O0
+Z7 tCvgOpt 0
+vfsm
+Z8 !s110 1690524704
+!i10b 1
+!s100 JNJSe4QL[P;cZ0?K9Mfb^2
+IL8O9Q[Gok@<BPDN^2om]Q3
+R1
+w1690516274
+8C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/FSM.v
+FC:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/FSM.v
+!i122 81
+L0 4 268
+R2
+R3
+r1
+!s85 0
+31
+Z9 !s108 1690524704.000000
+!s107 C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/inc.v|C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/FSM.v|
+!s90 -reportprogress|300|+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl|-vlog01compat|-work|presynth|C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/FSM.v|
+!s101 -O0
+!i113 1
+R5
+Z10 !s92 +incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl -vlog01compat -work presynth -O0
+R7
+vFSM_tb
+R8
+!i10b 1
+!s100 ?kLSBhHcLzjF12QGVnTkG0
+I@4`o6_oLj36kU]nFi[H^51
+R1
+w1690524700
+8C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/FSM_tb.v
+FC:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/FSM_tb.v
+!i122 82
+L0 4 111
+R2
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/FSM_tb.v|
+!s90 -reportprogress|300|+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl|+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus|-vlog01compat|-work|presynth|C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/FSM_tb.v|
+!s101 -O0
+!i113 1
+R5
+R6
+R7
+n@f@s@m_tb
 vMT29F8G08ABACAWP
 R0
 !i10b 1
-!s100 _I]QG1NgiI<47i0033De21
-IKf2I`T<g6`GLQR[2dhUPO2
+!s100 @Qdm9`FX=<G;8T6C0[oBJ3
+Io1zH=hYQEaP8`jQGUR`Fk3
 R1
-w1686721061
+w1688546919
 8C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/nand.v
 FC:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/nand.v
-!i122 55
+!i122 65
 L0 5 99
 R2
 R3
@@ -55,6 +104,6 @@ R4
 !s101 -O0
 !i113 1
 R5
-!s92 +incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl -vlog01compat -work presynth -O0
-R6
+R10
+R7
 n@m@t29@f8@g08@a@b@a@c@a@w@p
