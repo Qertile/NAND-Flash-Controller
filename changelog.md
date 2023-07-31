@@ -20,9 +20,8 @@ The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 - [ ] FSM
 
 -----------------------------------
-## Unreleased v0.1.15 (2023.07.##)
+## Unreleased v0.1.16 (2023.07.##)
 ### New
-- add `i_go_state` to indicate cmd/addr buffer is full, and good to change state
 ### Changed
 ### Removed
 ### Deprecated
@@ -30,6 +29,14 @@ The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 ### Known Issues
 ### Notes
 ### Reference
+
+-----------------------------------
+## NFC v0.1.15 (2023.07.31)
+### New
+- add `i_go_state` to indicate cmd/addr buffer is full, and good to change state
+### Fixed
+- fix errors while testing
+
 
 -----------------------------------
 ## NFC v0.1.14 (2023.07.##)
