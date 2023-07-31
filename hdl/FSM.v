@@ -132,7 +132,10 @@ end
 always @(C_Addr) begin
     i_addr[i_addr_ptr] <= C_Addr;
     i_addr_ptr = i_addr_ptr+1;
-    if (i_addr_ptr == 3'd5) begin
+    if (i_cmd[0] != 8'h60 && i_addr_ptr == 3'd5) begin
+        i_addr_ptr <= 0;
+    end
+    else if (i_addr_ptr == 3'd3)begin
         i_addr_ptr <= 0;
     end
 end
@@ -164,7 +167,7 @@ always @(i_state or posedge i_go_state) begin
                 
             # (`T_R + `T_RR) // # 20+25
             
-            for (i = 0; i<C_Length; i=1+1) begin
+            for (i = 0; i<C_Length; i=i+1) begin
                 rddata_cycle(F_DIO);
             end
         end 
@@ -180,11 +183,11 @@ always @(i_state or posedge i_go_state) begin
 
             # (`T_ADL) // # 70
             
-            for (i = 0; i<C_Length; i=1+1) begin
+            for (i = 0; i<C_Length; i=i+1) begin
                 wrdata_cycle(C_WrData);
             end
 
-            command_cycle (i_cmd[i]);
+            command_cycle (i_cmd[1]);
         end 
         else begin
         end

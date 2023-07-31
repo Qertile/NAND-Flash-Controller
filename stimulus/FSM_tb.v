@@ -58,24 +58,50 @@ end
 /* Command Signal */
 initial begin
     #(SYSCLK_PERIOD * 40 )
-    C_Cmd = 8'h00;
-    #(SYSCLK_PERIOD * 10 )
-    C_Cmd = 8'h30;
+    C_Cmd = 8'h60;
+    #(SYSCLK_PERIOD * 2 )
+    C_Cmd = 8'hD0;
 end
 
 /* Address Signal */
 initial begin
     #(SYSCLK_PERIOD * 40 )
     C_Addr = 8'hA0;
-    #(SYSCLK_PERIOD * 20 )
+    #(SYSCLK_PERIOD * 2 )
     C_Addr = 8'hA1;
-    #(SYSCLK_PERIOD * 20 )
+    #(SYSCLK_PERIOD * 2 )
     C_Addr = 8'hA2;
-    #(SYSCLK_PERIOD * 20 )
-    C_Addr = 8'hA3;
-    #(SYSCLK_PERIOD * 20 )
-    C_Addr = 8'hA4;
+    // #(SYSCLK_PERIOD * 2 )
+    // C_Addr = 8'hA3;
+    // #(SYSCLK_PERIOD * 2 )
+    // C_Addr = 8'hA4;
 end
+
+/* Data Signal */
+// initial begin
+//     #(SYSCLK_PERIOD * 40 )
+//     C_WrData = 8'h94;
+//     C_Length = 8'h08;
+//     #(SYSCLK_PERIOD * 2 )
+//     C_WrData = 8'h87;
+//     #(SYSCLK_PERIOD * 2 )
+//     C_WrData = 8'h94;
+//     #(SYSCLK_PERIOD * 2 )
+//     C_WrData = 8'h78;
+//     #(SYSCLK_PERIOD * 2 )
+//     C_WrData = 8'hAA;
+//     #(SYSCLK_PERIOD * 2 )
+//     C_WrData = 8'hAB;
+//     #(SYSCLK_PERIOD * 2 )
+//     C_WrData = 8'hAC;
+//     #(SYSCLK_PERIOD * 2 )
+//     C_WrData = 8'hAD;
+//     #(SYSCLK_PERIOD * 2 )
+//     C_WrData = 8'hAE;
+//     #(SYSCLK_PERIOD * 2 )
+//     C_WrData = 8'hAF;
+// end
+
 //always @(posedge SYSCLK) begin
 //
 //
