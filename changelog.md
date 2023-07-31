@@ -22,6 +22,7 @@ The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 -----------------------------------
 ## Unreleased v0.1.15 (2023.07.##)
 ### New
+- add `i_go_state` to indicate cmd/addr buffer is full, and good to change state
 ### Changed
 ### Removed
 ### Deprecated
@@ -35,7 +36,7 @@ The NAND flash controller for Micron MT29F8G08ABACAWP by verilog.
 ### Fixed
 - `i_cmd` doesn't catch commands properly
 ### Known Issues
-- State machine doesn't do the state because of command/address are not arrive while state changing. --> need a signal or flag to indicate cmd/addr buffer is full, it is good to change state
+- State machine doesn't do the state because of command/address are not arrive while state changing. --> need a signal or flag to indicate cmd/addr buffer is full, and good to change state
 
 -----------------------------------
 ## NFC v0.1.13 (2023.07.28)

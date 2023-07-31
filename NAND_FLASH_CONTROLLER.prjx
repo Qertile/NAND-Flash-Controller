@@ -733,8 +733,8 @@ SIZE="877"
 ENDFILE
 VALUE "<project>\hdl\FSM.v,hdl"
 STATE="utd"
-TIME="1690531670"
-SIZE="6434"
+TIME="1690786053"
+SIZE="6265"
 ENDFILE
 VALUE "<project>\hdl\inc.v,hdl"
 STATE="utd"
@@ -791,11 +791,6 @@ TIME="1688611698"
 SIZE="13597"
 PARENT="<project>\component\work\CoreUARTapb_C0\CoreUARTapb_C0_0\CoreUARTapb_C0_CoreUARTapb_C0_0_CoreUARTapb.cxf"
 ENDFILE
-VALUE "<project>\simulation\FSM_tb_presynth_simulation.log,log"
-STATE="utd"
-TIME="1690531685"
-SIZE="25352"
-ENDFILE
 VALUE "<project>\simulation\peripheral_init.bfm,sim"
 STATE="utd"
 TIME="1686792717"
@@ -832,8 +827,8 @@ SIZE="2987"
 ENDFILE
 VALUE "<project>\stimulus\FSM_tb.v,tb_hdl"
 STATE="utd"
-TIME="1690532098"
-SIZE="2526"
+TIME="1690536101"
+SIZE="2497"
 ENDFILE
 ENDLIST
 LIST UsedFile

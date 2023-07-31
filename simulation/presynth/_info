@@ -34,22 +34,22 @@ Z5 o-vlog01compat -work presynth -O0
 Z6 !s92 +incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl +incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus -vlog01compat -work presynth -O0
 Z7 tCvgOpt 0
 vfsm
-Z8 !s110 1690535763
+Z8 !s110 1690786176
 !i10b 1
-!s100 K<jlZ;olJhbHcC9K0HHdQ2
-I7<XHbh`AW;J[@;=g1cRPn3
+!s100 Wl@K2[z?0ND4KcO`f80DC3
+I;ON;On4aVKNGK01HPNk]j2
 R1
-w1690535744
+w1690786169
 8C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/FSM.v
 FC:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/FSM.v
-!i122 103
-L0 4 296
+!i122 133
+L0 4 297
 R2
 R3
 r1
 !s85 0
 31
-Z9 !s108 1690535763.000000
+Z9 !s108 1690786176.000000
 !s107 C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/inc.v|C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/FSM.v|
 !s90 -reportprogress|300|+incdir+C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl|-vlog01compat|-work|presynth|C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/hdl/FSM.v|
 !s101 -O0
@@ -63,10 +63,10 @@ R8
 !s100 G<9VHKehd7<Z`>zXWDliR1
 IgX[Z?FJQUI6zU77>gh[D03
 R1
-w1690535545
+w1690536101
 8C:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/FSM_tb.v
 FC:/Users/Nathan/Desktop/UADL/Internship/Acromax/NAND-Flash-Controller/Project/stimulus/FSM_tb.v
-!i122 104
+!i122 134
 L0 4 116
 R2
 R3

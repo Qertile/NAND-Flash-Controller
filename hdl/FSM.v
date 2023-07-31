@@ -73,10 +73,11 @@ reg [2:0]   i_state;
 reg [2:0]   i_next_state;
 reg [7:0]   i_cmd  [1:0];
 reg [7:0]   i_addr [4:0];
-reg         icmd_ptr;
-reg [2:0]   iaddr_ptr;
+reg         i_cmd_ptr;
+reg [2:0]   i_addr_ptr;
 reg [7:0]   i_wrdata_buffer;
 reg [7:0]   i_rddata_buffer;
+wire        i_go_state;
 
 
 /* Custom define states for state machine */
@@ -101,8 +102,8 @@ always @(posedge P_clk or negedge P_nrst) begin
         /* reset NAND flash */
         i_state <= STATE_RSET;
         /* reset command buffer */
-        icmd_ptr <= 0;
-        iaddr_ptr <= 0;
+        i_cmd_ptr <= 0;
+        i_addr_ptr <= 0;
     end 
     else begin
         case (C_Cmd)
@@ -124,38 +125,39 @@ always @(posedge P_clk or negedge P_nrst) begin
 end
 
 always @(C_Cmd) begin
-    i_cmd[icmd_ptr] <= C_Cmd;
-    icmd_ptr = ~icmd_ptr;
+    i_cmd[i_cmd_ptr] <= C_Cmd;
+    i_cmd_ptr = ~i_cmd_ptr;
 end
 
 always @(C_Addr) begin
-    i_addr[iaddr_ptr] <= C_Addr;
-    iaddr_ptr = iaddr_ptr+1;
-    if (iaddr_ptr == 3'd5) begin
-        iaddr_ptr <= 0;
+    i_addr[i_addr_ptr] <= C_Addr;
+    i_addr_ptr = i_addr_ptr+1;
+    if (i_addr_ptr == 3'd5) begin
+        i_addr_ptr <= 0;
     end
 end
+
+assign i_go_state = (!i_cmd_ptr) & (!i_addr_ptr);
+
 integer i;
-always @(i_state) begin
+always @(i_state or posedge i_go_state) begin
 
     case (i_state)
     STATE_RSET: begin
         if (!P_nrst) begin
             command_cycle(8'hFF);
-            // i_next_state <= STATE_IDLE;
         end 
         else begin
-            // i_next_state <= STATE_IDLE;
         end
     end
     STATE_IDLE: begin
         idle_cycle();
-        // i_next_state <= STATE_IDLE;
+        i_next_state <= STATE_IDLE;
     end
     STATE_READ: begin
         if (i_cmd[0] == 8'h00 && i_cmd[1] == 8'h30) begin
             command_cycle (i_cmd[0]);
-            for (i = 0; i<5; i=1+1) begin
+            for (i = 0; i<5; i=i+1) begin
                 address_cycle (i_addr[i]);
             end
             command_cycle (i_cmd[1]);
@@ -165,16 +167,14 @@ always @(i_state) begin
             for (i = 0; i<C_Length; i=1+1) begin
                 rddata_cycle(F_DIO);
             end
-            // i_next_state <= STATE_IDLE;
         end 
         else begin
-            // i_next_state <= STATE_IDLE;
         end
     end
     STATE_WRIT: begin
         if (i_cmd[0] == 8'h80 && i_cmd[1] == 8'h10) begin
             command_cycle (i_cmd[0]);
-            for (i = 0; i<5; i=1+1) begin
+            for (i = 0; i<5; i=i+1) begin
                 address_cycle (i_addr[i]);
             end
 
@@ -185,17 +185,15 @@ always @(i_state) begin
             end
 
             command_cycle (i_cmd[i]);
-            // i_next_state <= STATE_IDLE;
         end 
         else begin
-            // i_next_state <= STATE_IDLE;
         end
     end
     STATE_ERAS: begin
         if (i_cmd[0] == 8'h60 && i_cmd[1] == 8'hD0) begin
             command_cycle(i_cmd[0]);
          
-            for (i = 0; i<3; i=1+1) begin
+            for (i = 0; i<3; i=i+1) begin
                 address_cycle (i_addr[i]);
             end
         
@@ -204,7 +202,6 @@ always @(i_state) begin
     end
     default: begin
         idle_cycle();
-        // i_next_state <= STATE_IDLE;
     end
     endcase
 end
@@ -228,6 +225,7 @@ task command_cycle;
         F_nCE = ~F_nCE; 
         F_CLE = ~F_CLE;
         F_ALE = ~F_ALE;
+        F_nCE = (`HIGH);
     end
 endtask
 
@@ -246,6 +244,7 @@ task address_cycle;
         F_nWE = ~F_nWE;
 
         # (`T_WH); // # 7
+        F_nCE = (`HIGH);
     end
 endtask
 
@@ -263,6 +262,7 @@ task wrdata_cycle;
         F_nWE = ~F_nWE;
 
         # (`T_WH); // # 7
+        F_nCE = (`HIGH);
     end
 endtask
 
@@ -280,6 +280,7 @@ task rddata_cycle;
             F_nRE = ~F_nRE;
 
             # (`T_REH); // # 7
+            F_nCE = (`HIGH);
         end
     end
 endtask
